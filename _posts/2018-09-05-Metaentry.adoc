@@ -103,6 +103,7 @@ Some need to know thing:
 * It doesn't even work in chrome every time. Even in a firefox quantum 61, I had to try and try again a couple of times to re-publish my first post. When something in IT works stohastic like this... Well, I wouldn't call that software as mature.
 
 The concept, how this Hubpress adminstration seems working:
+
 * Gets you a temporary access token to your github account every time you logs in. Every time! If you close the window and open it again, or just press the back button on your browser history! Geez! What the hack?! Can't it store it's important parts in a cookie or in a couple of cookies?!
 * Then you do what you want to do. You can save as a draft. In this case your post will go to _posts directory.
 * When you press publish, ... I assume, some javascript will render all the html contents (index.html, rss/index.xml, yyyy/mm/dd/Title-whatever.html, author/login/index.html). Then wrap the whole rendered content into a git transaction and uploads that to github via it's api using the token.
@@ -112,6 +113,7 @@ For crying out loud: WHY!
 
 At least, I don't have too much posts yet, if I want to migrate this whole thing onto a different blog engine.
 Comments and suggestions are welcome! At this stage, I say, this hubpress is really not reached the v1.0 maturity, and I need something which just works! I don't want to suck to much with gui. I can accept that, to press the publish in the browser. But:
+
 . please work! Not like a cat's mood! Work! Every freakin' time I press the publish button!
 . do not make mess in my git repo's history and don't make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of *Every* commit!
 . Oh, and please! If sg. works once, don't make it wrong in the background! Eg. When I rendered the content yesterday, it considered the :hp-image: tag in the source. Now, It just disappeared, not working anymore! It means for me, I still depend on unreliable js-shit which comes from 3rd party content providers. I don't want to make that Faustian deal!
