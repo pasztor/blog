@@ -1,10 +1,57 @@
 {
   "meta": {
-    "username": "put your username here",
-    "repositoryName": "put your repository name here",
-    "branch": "gh-pages"
+    "username": "pasztor",
+    "repositoryName": "blog",
+    "branch": "gh-pages",
+    "cname": ""
   },
   "theme": {
-    "name": "Casper"
-  }
+    "name": "casper"
+  },
+  "urls": {
+    "site": "https://pasztor.github.io/blog",
+    "hubpress": "https://pasztor.github.io/blog",
+    "theme": "//pasztor.github.io/blog/themes/casper",
+    "images": "https://pasztor.github.io/blog/images"
+  },
+  "initialisationConfigComponent": {
+    "name": "initialise-configuration",
+    "computed": {},
+    "methods": {},
+    "staticRenderFns": [
+      null,
+      null,
+      null
+    ],
+    "_compiled": true,
+    "beforeCreate": [
+      null
+    ]
+  },
+  "site": {
+    "title": "Gyu's personal blog",
+    "description": "life, the universe and everything",
+    "logo": "/blog/images/gyu.jpeg",
+    "cover": "/blog/images/firstentrybg.jpg",
+    "delay": "",
+    "postsPerPage": "5",
+    "blogPath": "",
+    "googleAnalytics": "",
+    "disqus": "psztorgyrgy"
+  },
+  "socialnetwork": {
+    "email": "coruscant0@gmail.com",
+    "github": "https://github.com/pasztor",
+    "twitter": "https://twitter.com/_gyu_",
+    "facebook": "https://facebook.com/gy.pasztor",
+    "googleplus": "https://plus.google.com/+Gy%C3%B6rgyP%C3%A1sztor",
+    "instagram": "https://www.instagram.com/pasztor.gyorgy/",
+    "pinterest": "",
+    "flickr": "",
+    "linkedin": "https://www.linkedin.com/in/gy%C3%B6rgy-p%C3%A1sztor-33a59980/",
+    "stackoverflow": "https://stackoverflow.com/users/5520588/gy%C3%B6rgy-p%C3%A1sztor",
+    "paypalme": "",
+    "opencollective": ""
+  },
+  "navigation": []
 }
