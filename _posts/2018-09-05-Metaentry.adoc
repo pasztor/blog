@@ -1,0 +1,116 @@
+// = Your Blog title
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+// :published_at: 2019-01-31
+// :hp-tags: HubPress, Blog, Open_Source,
+// :hp-alt-title: My English Title
+= Metaentry
+
+:published_at: 2018-09-04
+:hp-tags: Blog, git, github, github_pages, hubpress
+:hp-alt-title: Metaentry
+:toc: macro
+
+toc::[]
+
+== Foreword
+
+Well I thought it could be a good idea to write down my experiences how did I configured and set up this blog engine, even if most of the tasks were trivial.
+Since it's a deeply technical topic, I thought the whole audience understands english, so it makes no sense to write this entry in hungarian.
+I'll have a hungarian foreword as well, just to clarify this, but the language of this entry will be english.
+
+== Előszó
+
+Úgy gondoltam, hogy jó ötlet lenne leírni a tapasztalataimat a blogmotor bekonfigurálásával és életre lehelésével kapcsolatban, még akkor is, ha a lépések egy része teljesen magától értetődő volt.
+Mivel ez egy meglehetősen technikai jellegű témakör, úgy gondoltam, hogy akit ez a téma érdekelhet ért angolul, így nincs értelme ezt a bejegyzést magyarul írjam.
+Az előszót megírtam mindkét nyelven, hogy ezt tisztázzam, de ezen bejegyzés nyelve angol.
+
+== Which project owns your github pages domain
+
+In medias res: Let's start with some historical background: I forked the https://github.com/HubPress/hubpress.io[hubpress repo] a long time ago to handle this problem area, and started the implementation.
+
+It was so long ago, that I don't even remember why did I choose hubpress among the offered possibilities to blog through github. So I won't write cons and pros why did I choose hubpress. Honestly? I don't f..ng remember. :smile:
+
+Just there were a very important question, where I stalled the procedure and let myself time to manage it at a later time when I have the peacful environment to think about that deeply and make the right decesion. This was the https://github.com/HubPress/hubpress.io#configure-the-correct-branch[3.2] element from the installation steps: "configure the correct branch".
+
+Don't worry: I will explain the whole installation and setup procedure in this article, just I thought the background of this decision is kind of 0th step important.
+
+Because many things will depend on this decesion. That was why I stalled for a long time to start my blog.
+
+You can choose the easier way and let hubpress manage your "Github pages domain". Which means, if you want to publish anything onto your github pages site, you have to do it with hubpress. Since my whole idea was to become independent of providers, I didn't want to push myself into a dependency on another technological component. So I choose the other option to let hubpress manage only a "subdomain". Well, the description in https://github.com/HubPress/hubpress.io#i-am-using-my-github-pages-domain-already-or-i-want-to-use-a-custom-domain[3.2.2] is quite confusing, since it's not a subdomain. A subdomain would look like `subdomain.user.github.io`, but in this case, the base url looks like `user.github.io/reponame`.
+
+This confusing wording was also part of the reason why I stalled to start my blog. I wanted to do it when I have enough time and patience to understand how this part works.
+After I made some basic experiments with my _GPD_ (I'll use this in the following, since it's very annoying to write down _Github Pages Domain_ every time), I decided to continue the work on the blog's setup. The exepriments were very simple: I just uploaded a simple index.html, and checked in my browser.
+
+== The _environment_
+
+* My github account was given
+* Hubpress as a decision of my choice was given
+* My decision, that I do not want to let hubpress manage my whole _GPD_ was given
+* my _username.github.io_ repo was given (in case if I have to do something with that too)
+* Time and peacful environment was given
+
+== The installation and setup of hubpress
+
+The classical _installation_ procedure in this case is simple:
+
+. Just log in to github in your browser with your own account then point your browser to the https://github.com/HubPress/hubpress.io[hubpress repo] and fork the project. This is a fork even if you don't want to contribute to hubpress later.
+. Go to your fork's settings and:
+ .. rename fork to `blog`. At least I renamed my to `blog`  since I wish to see `pasztor.github.io/blog` baseurl in my blog
+ .. change the default branch from `master` to `gh-pages`
+. Clone your repo to your PC. For those who may not know me well enough I more like cli tools over gui tools. Cli tools guarantee you a way to automate steps and repeat steps. Or repeat them many times every time with a very tiny difference. Whatever you want. cli is limit is only your imagination! Even if I don't want to clone this repo often, I may want to do things in my working copy, so it's kind of a neccessary step to do this. So, I just run the `git clone <repourl>` command in my terminal.
+. edit your ˙hubpress/config.json` file. The mandatory fields what you have to fill at this step is: `username` which is your github account's loginname, and `repositoryName` which was `blog` in my case.
+ .. `git add hubpress/config.json`
+ .. git commit
+ .. git push
+
+Now your blog is ready to use.
+
+== Settings and realtive/absolute urls
+
+Well, after I saw my blog-engine _working_, I immediately forgot the rest of the documentation. I needed google to go back to it, and find the admin page even if that is the first entry in the knowledge base. But hey, it was in the first 5 minutes with feeling success! I was not that desperate to read a knowledge base, where you a very long list, one entry after another... Looks booooring!
+But if a software is written well, that don't need documentatio. Or at least the users don't want to read that because it's kind of self-suggesting how to use and which function. Maybe that's my own vision, but I think a UX expert would confirm this.
+
+Cheat #1 admin page of your blog is `<baseurl>/hubpress`
+
+Now the admin page. I usually try to check all the settings at the first time. Maybe you will forget them forever later. My motto: `If it works, you don't need to fix it!`
+
+But an important thing what needed some time and try-and error cycle. Even with this, it was faster then find the right chapter in the knowledge base. This is the _social media links_ section. So, when it asks your facebook or github or google+ id, it's confufing again: it needs the full url for them. eg. https://facebook.com/gy.pasztor[https://facebook.com/gy.pasztor].
+
+== Disqus
+
+So, in most of the case, I could dodge the bullet and could make the functions work very fast without reading the documentation. If the labels in the settings were more precise I could skip the try and error cycles as well. But don't be greedy!
+
+Disqus was a whole different story. I already had a disqus id. Somewhere. I barely used that. Mostly I commented below a couple of hwsw articles. But that was rare. I don't follow that, only if a deep link is shared from another article from hup, or something happens in the world and that is mentioned in one of my friends's facebook newsflow.
+
+To let user's comment on your blog entry you have to create a "site" in your disqus account. So when the setting asks a *shortname* for a disqus site, well, my first thought was that is my _loginname_ to disqus. Even if I use that with an sso ... ehm... I never remember if that's connected with my G+ or FaceBook account :)
+So, I logged in, checked my account, pasted that to the *shortname* in the settings.
+
+Still not work.
+I did everything well. After a couple of google hits it seemed, that disqus just needs some time to spin up the initialization of a new site.
+But it bugged me. I read the term *site* at too many places, and I went through every tiny detail of my disqus account, and haven't met the term *site*.
+
+So I thought it's not a delay because of some initialization. I need to register a *site*.
+You need to go to https://disqus.com/admin/[disqus's admin site] and register your site there. They have a free priceplan as well, so you can use it free.
+And as far as I could understood, without advertisements! At least, on my personal blog, I don't want to see any advertisements.
+
+== Afterlife
+
+Some need to know thing:
+
+* I tried to add this via cli. A couple of things went wrong in the web admin interface. Then...
+* I tried to reset the whole git history, then republish the whole story begginging from my first entry...
+* It doesn't even work in chrome every time. Even in a firefox quantum 61, I had to try and try again a couple of times to re-publish my first post. When something in IT works stohastic like this... Well, I wouldn't call that software as mature.
+
+The concept, how this Hubpress adminstration seems working:
+* Gets you a temporary access token to your github account every time you logs in. Every time! If you close the window and open it again, or just press the back button on your browser history! Geez! What the hack?! Can't it store it's important parts in a cookie or in a couple of cookies?!
+* Then you do what you want to do. You can save as a draft. In this case your post will go to _posts directory.
+* When you press publish, ... I assume, some javascript will render all the html contents (index.html, rss/index.xml, yyyy/mm/dd/Title-whatever.html, author/login/index.html). Then wrap the whole rendered content into a git transaction and uploads that to github via it's api using the token.
+
+Sometimes it just changes nothing, but puts an empty commit onto the top of your git history!
+For crying out loud: WHY!
+
+At least, I don't have too much posts yet, if I want to migrate this whole thing onto a different blog engine.
+Comments and suggestions are welcome! At this stage, I say, this hubpress is really not reached the v1.0 maturity, and I need something which just works! I don't want to suck to much with gui. I can accept that, to press the publish in the browser. But:
+. please work! Not like a cat's mood! Work! Every freakin' time I press the publish button!
+. do not make mess in my git repo's history and don't make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of *Every* commit!
