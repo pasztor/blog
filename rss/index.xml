@@ -1,39 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 22:23:31 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Első bejegyzés]]></title><description><![CDATA[<div class="sect1">
-<h2 id="_curriculum_vitae_hu_avagy_mi_a_fenének_is_csináltam_ezt_blogot_meg_miért_pont_így_és_ide">Curriculum Vitae/hu == avagy mi a fenének is csináltam ezt blogot, meg miért pont így és ide</h2>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 22:47:31 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<!-- toc disabled -->
+</div>
+</div>
+<div class="sect1">
+<h2 id="_foreword">Foreword</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Azért szántam rá az időt erre a blogmotorra, a bekonfigurálására, stb. mivel szerettem volna egy felhőszolgáltatótól független módszert arra, hogy közzétegyem, amit közzé szeretnék tenni. Ha valaki ismeri a git működését, az tudja, hogy ez ebben a formában miért független és jó így. Aki meg nem, azokat nem untatom a technikai részletekkel! ;-)</p>
-</div>
-<div class="paragraph">
-<p>Tipikusan ilyen dolgok voltak a Pestre / Dublinba költözésemmel kapcsolatos élmények, amelyeket anno szívesen osztottam meg sztorik és képek kiséretében. De szívesen mesélek a lekűzdött technikai problémákról. Ezek az utóbbi időben rendszerint az OmniOS-en töltött kalandozásaimat jelentik. A fényképalbumok valószínűleg továbbra is FB-albumra vagy épp google photos albumra mutató linkeket fognak jelenteni. (Az eredetik úgyis megvannak a nas-on)
-Ami miatt viszont a blogmotor ötlete megtetszett: nem csak beleírok #blog címkéket a szövegbe ezek után, hanem a tag-eket valóban rátszi (reményeim szerint) a bejegyzéseimre, és ennek megfelelően lehet bennük akár keresni is.</p>
-</div>
-<div class="paragraph">
-<p>Ami már csak azért is jó, mert sokszor szembesültem én magam is avval, hogy de jó lett volna, ha anno ezt megírom és nem újra kell kitaláljam nulláról google / stackoverflow és más woodo segítségével, hogy elsőre hogy is oldottam meg. Nem mondom, néha volt, hogy nem találtam meg ugyanazt és másodjára egy sokkal elegánsabb megoldást találtam ugyanarra a problémára. De ilyenkor csak az emlékezetem marad támpontnak a kétféle megoldás összehasonlítására. Különben is: később semmi sem akadályoz, még ha tudod is a megoldást (magadnak köszönhetően), hogy egy még szebb megoldást találj, egy már ismert problémára.</p>
-</div>
-<div class="paragraph">
-<p>Köszönöm a figyelmet!
-Kéremkapcsojjaki'!</p>
+<p>Well I thought it could be a good idea to write down my experiences how did I configured and set up this blog engine, even if most of the tasks were trivial.
+Since it&#8217;s a deeply technical topic, I thought the whole audience understands english, so it makes no sense to write this entry in hungarian.
+I&#8217;ll have a hungarian foreword as well, just to clarify this, but the language of this entry will be english.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_curriculum_vitae_en_why_on_earth_did_i_this_blog_why_this_way_why_here">Curriculum Vitae/en == why on earth did I this blog, why this way, why here</h2>
+<h2 id="_előszó">Előszó</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I spent the time and effort to configure and make work this blog engine, because I wanted a cloud-provider independent way to publish what I want to publish. Who nows git&#8217;s modus operandi will also know why this solution is an independent one and why could this work. Thy who don&#8217;t know git that deep, well I don&#8217;t want to bother them with technical details! ;-)</p>
+<p>Úgy gondoltam, hogy jó ötlet lenne leírni a tapasztalataimat a blogmotor bekonfigurálásával és életre lehelésével kapcsolatban, még akkor is, ha a lépések egy része teljesen magától értetődő volt.
+Mivel ez egy meglehetősen technikai jellegű témakör, úgy gondoltam, hogy akit ez a téma érdekelhet ért angolul, így nincs értelme ezt a bejegyzést magyarul írjam.
+Az előszót megírtam mindkét nyelven, hogy ezt tisztázzam, de ezen bejegyzés nyelve angol.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_which_project_owns_your_github_pages_domain">Which project owns your github pages domain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In medias res: Let&#8217;s start with some historical background: I forked the <a href="https://github.com/HubPress/hubpress.io">hubpress repo</a> a long time ago to handle this problem area, and started the implementation.</p>
 </div>
 <div class="paragraph">
-<p>Typical topics around my blogposts will/were be the moments and stories when I moved to Budapest / Dublin. Those were events in my life I liked to share with details in the stories, or just publish some pictures. However I also like to share how did I solved technical issues which lately means my adventures regarding OmniOS. Probably I will share photo albums via links to my facebook albums or google photos albums. (I have the originals on my nas.)
-The reason why I thought a blog-engine would be a good idea: From now on, I don&#8217;t just write #tag into my posts, but (hopefully) the engine will track my tags and later you can look up on them.</p>
+<p>It was so long ago, that I don&#8217;t even remember why did I choose hubpress among the offered possibilities to blog through github. So I won&#8217;t write cons and pros why did I choose hubpress. Honestly? I don&#8217;t f..ng remember. :smile:</p>
 </div>
 <div class="paragraph">
-<p>Which is good, because I faced with the scenario many times when it could be handy If I already wrote what did I solved and how, and I don&#8217;t have to reinvent the wheel again, and again using google / stackoverflow or other mumbo-jumbo. And maybe the second solution is not as good (eg. because of time pressure) like the first one was. I don&#8217;t say, that sometimes I did not found a better or more elegant solution on the second time. I&#8217;m just sayin' that only my unreliable memories is my basis to compare the two solution.
-And nothing blocks you later, (even if you already know your solution because of your own cookbook aka. blog), to improve that!</p>
+<p>Just there were a very important question, where I stalled the procedure and let myself time to manage it at a later time when I have the peacful environment to think about that deeply and make the right decesion. This was the <a href="https://github.com/HubPress/hubpress.io#configure-the-correct-branch">3.2</a> element from the installation steps: "configure the correct branch".</p>
 </div>
 <div class="paragraph">
-<p>Thanks for reading!
-That&#8217;s all folks!</p>
+<p>Don&#8217;t worry: I will explain the whole installation and setup procedure in this article, just I thought the background of this decision is kind of 0th step important.</p>
+</div>
+<div class="paragraph">
+<p>Because many things will depend on this decesion. That was why I stalled for a long time to start my blog.</p>
+</div>
+<div class="paragraph">
+<p>You can choose the easier way and let hubpress manage your "Github pages domain". Which means, if you want to publish anything onto your github pages site, you have to do it with hubpress. Since my whole idea was to become independent of providers, I didn&#8217;t want to push myself into a dependency on another technological component. So I choose the other option to let hubpress manage only a "subdomain". Well, the description in <a href="https://github.com/HubPress/hubpress.io#i-am-using-my-github-pages-domain-already-or-i-want-to-use-a-custom-domain">3.2.2</a> is quite confusing, since it&#8217;s not a subdomain. A subdomain would look like <code>subdomain.user.github.io</code>, but in this case, the base url looks like <code>user.github.io/reponame</code>.</p>
+</div>
+<div class="paragraph">
+<p>This confusing wording was also part of the reason why I stalled to start my blog. I wanted to do it when I have enough time and patience to understand how this part works.
+After I made some basic experiments with my <em>GPD</em> (I&#8217;ll use this in the following, since it&#8217;s very annoying to write down <em>Github Pages Domain</em> every time), I decided to continue the work on the blog&#8217;s setup. The exepriments were very simple: I just uploaded a simple index.html, and checked in my browser.</p>
 </div>
 </div>
-</div>]]></description><link>https://pasztor.github.io/blog/2018/09/02/First-Entry.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/02/First-Entry.html</guid><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Sun, 02 Sep 2018 00:00:00 GMT</pubDate></item></channel></rss>
+</div>
+<div class="sect1">
+<h2 id="_the_em_environment_em">The <em>environment</em></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>My github account was given</p>
+</li>
+<li>
+<p>Hubpress as a decision of my choice was given</p>
+</li>
+<li>
+<p>My decision, that I do not want to let hubpress manage my whole <em>GPD</em> was given</p>
+</li>
+<li>
+<p>my <em>username.github.io</em> repo was given (in case if I have to do something with that too)</p>
+</li>
+<li>
+<p>Time and peacful environment was given</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_installation_and_setup_of_hubpress">The installation and setup of hubpress</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The classical <em>installation</em> procedure in this case is simple:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Just log in to github in your browser with your own account then point your browser to the <a href="https://github.com/HubPress/hubpress.io">hubpress repo</a> and fork the project. This is a fork even if you don&#8217;t want to contribute to hubpress later.</p>
+</li>
+<li>
+<p>Go to your fork&#8217;s settings and:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>rename fork to <code>blog</code>. At least I renamed my to <code>blog</code>  since I wish to see <code>pasztor.github.io/blog</code> baseurl in my blog</p>
+</li>
+<li>
+<p>change the default branch from <code>master</code> to <code>gh-pages</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Clone your repo to your PC. For those who may not know me well enough I more like cli tools over gui tools. Cli tools guarantee you a way to automate steps and repeat steps. Or repeat them many times every time with a very tiny difference. Whatever you want. cli is limit is only your imagination! Even if I don&#8217;t want to clone this repo often, I may want to do things in my working copy, so it&#8217;s kind of a neccessary step to do this. So, I just run the <code>git clone &lt;repourl&gt;</code> command in my terminal.</p>
+</li>
+<li>
+<p>edit your ˙hubpress/config.json` file. The mandatory fields what you have to fill at this step is: <code>username</code> which is your github account&#8217;s loginname, and <code>repositoryName</code> which was <code>blog</code> in my case.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>git add hubpress/config.json</code></p>
+</li>
+<li>
+<p>git commit</p>
+</li>
+<li>
+<p>git push</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now your blog is ready to use.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_settings_and_realtive_absolute_urls">Settings and realtive/absolute urls</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Well, after I saw my blog-engine <em>working</em>, I immediately forgot the rest of the documentation. I needed google to go back to it, and find the admin page even if that is the first entry in the knowledge base. But hey, it was in the first 5 minutes with feeling success! I was not that desperate to read a knowledge base, where you a very long list, one entry after another&#8230;&#8203; Looks booooring!
+But if a software is written well, that don&#8217;t need documentatio. Or at least the users don&#8217;t want to read that because it&#8217;s kind of self-suggesting how to use and which function. Maybe that&#8217;s my own vision, but I think a UX expert would confirm this.</p>
+</div>
+<div class="paragraph">
+<p>Cheat #1 admin page of your blog is <code>&lt;baseurl&gt;/hubpress</code></p>
+</div>
+<div class="paragraph">
+<p>Now the admin page. I usually try to check all the settings at the first time. Maybe you will forget them forever later. My motto: <code>If it works, you don&#8217;t need to fix it!</code></p>
+</div>
+<div class="paragraph">
+<p>But an important thing what needed some time and try-and error cycle. Even with this, it was faster then find the right chapter in the knowledge base. This is the <em>social media links</em> section. So, when it asks your facebook or github or google+ id, it&#8217;s confufing again: it needs the full url for them. eg. <a href="https://facebook.com/gy.pasztor">https://facebook.com/gy.pasztor</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_disqus">Disqus</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So, in most of the case, I could dodge the bullet and could make the functions work very fast without reading the documentation. If the labels in the settings were more precise I could skip the try and error cycles as well. But don&#8217;t be greedy!</p>
+</div>
+<div class="paragraph">
+<p>Disqus was a whole different story. I already had a disqus id. Somewhere. I barely used that. Mostly I commented below a couple of hwsw articles. But that was rare. I don&#8217;t follow that, only if a deep link is shared from another article from hup, or something happens in the world and that is mentioned in one of my friends&#8217;s facebook newsflow.</p>
+</div>
+<div class="paragraph">
+<p>To let user&#8217;s comment on your blog entry you have to create a "site" in your disqus account. So when the setting asks a <strong>shortname</strong> for a disqus site, well, my first thought was that is my <em>loginname</em> to disqus. Even if I use that with an sso &#8230;&#8203; ehm&#8230;&#8203; I never remember if that&#8217;s connected with my G+ or FaceBook account :)
+So, I logged in, checked my account, pasted that to the <strong>shortname</strong> in the settings.</p>
+</div>
+<div class="paragraph">
+<p>Still not work.
+I did everything well. After a couple of google hits it seemed, that disqus just needs some time to spin up the initialization of a new site.
+But it bugged me. I read the term <strong>site</strong> at too many places, and I went through every tiny detail of my disqus account, and haven&#8217;t met the term <strong>site</strong>.</p>
+</div>
+<div class="paragraph">
+<p>So I thought it&#8217;s not a delay because of some initialization. I need to register a <strong>site</strong>.
+You need to go to <a href="https://disqus.com/admin/">disqus&#8217;s admin site</a> and register your site there. They have a free priceplan as well, so you can use it free.
+And as far as I could understood, without advertisements! At least, on my personal blog, I don&#8217;t want to see any advertisements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_afterlife">Afterlife</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some need to know thing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I tried to add this via cli. A couple of things went wrong in the web admin interface. Then&#8230;&#8203;</p>
+</li>
+<li>
+<p>I tried to reset the whole git history, then republish the whole story begginging from my first entry&#8230;&#8203;</p>
+</li>
+<li>
+<p>It doesn&#8217;t even work in chrome every time. Even in a firefox quantum 61, I had to try and try again a couple of times to re-publish my first post. When something in IT works stohastic like this&#8230;&#8203; Well, I wouldn&#8217;t call that software as mature.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The concept, how this Hubpress adminstration seems working:
+* Gets you a temporary access token to your github account every time you logs in. Every time! If you close the window and open it again, or just press the back button on your browser history! Geez! What the hack?! Can&#8217;t it store it&#8217;s important parts in a cookie or in a couple of cookies?!
+* Then you do what you want to do. You can save as a draft. In this case your post will go to _posts directory.
+* When you press publish, &#8230;&#8203; I assume, some javascript will render all the html contents (index.html, rss/index.xml, yyyy/mm/dd/Title-whatever.html, author/login/index.html). Then wrap the whole rendered content into a git transaction and uploads that to github via it&#8217;s api using the token.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes it just changes nothing, but puts an empty commit onto the top of your git history!
+For crying out loud: WHY!</p>
+</div>
+<div class="paragraph">
+<p>At least, I don&#8217;t have too much posts yet, if I want to migrate this whole thing onto a different blog engine.
+Comments and suggestions are welcome! At this stage, I say, this hubpress is really not reached the v1.0 maturity, and I need something which just works! I don&#8217;t want to suck to much with gui. I can accept that, to press the publish in the browser. But:
+. please work! Not like a cat&#8217;s mood! Work! Every freakin' time I press the publish button!
+. do not make mess in my git repo&#8217;s history and don&#8217;t make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of <strong>Every</strong> commit!</p>
+</div>
+</div>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/09/05/Metaentry.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/05/Metaentry.html</guid><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate></item></channel></rss>
