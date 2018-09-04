@@ -118,4 +118,4 @@ Comments and suggestions are welcome! At this stage, I say, this hubpress is rea
 . do not make mess in my git repo's history and don't make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of *Every* commit!
 . Oh, and please! If sg. works once, don't make it wrong in the background! Eg. When I rendered the content yesterday, it considered the :hp-image: tag in the source. Now, It just disappeared, not working anymore! It means for me, I still depend on unreliable js-shit which comes from 3rd party content providers. I don't want to make that Faustian deal!
 
-Af any of you have a better suggestion: comments are welcome!
+If any of you have a better suggestion: comments are welcome!
