@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 22:57:07 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 23:04:28 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <!-- toc disabled -->
 </div>
@@ -187,10 +187,20 @@ And as far as I could understood, without advertisements! At least, on my person
 </ul>
 </div>
 <div class="paragraph">
-<p>The concept, how this Hubpress adminstration seems working:
-* Gets you a temporary access token to your github account every time you logs in. Every time! If you close the window and open it again, or just press the back button on your browser history! Geez! What the hack?! Can&#8217;t it store it&#8217;s important parts in a cookie or in a couple of cookies?!
-* Then you do what you want to do. You can save as a draft. In this case your post will go to _posts directory.
-* When you press publish, &#8230;&#8203; I assume, some javascript will render all the html contents (index.html, rss/index.xml, yyyy/mm/dd/Title-whatever.html, author/login/index.html). Then wrap the whole rendered content into a git transaction and uploads that to github via it&#8217;s api using the token.</p>
+<p>The concept, how this Hubpress adminstration seems working:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gets you a temporary access token to your github account every time you logs in. Every time! If you close the window and open it again, or just press the back button on your browser history! Geez! What the hack?! Can&#8217;t it store it&#8217;s important parts in a cookie or in a couple of cookies?!</p>
+</li>
+<li>
+<p>Then you do what you want to do. You can save as a draft. In this case your post will go to _posts directory.</p>
+</li>
+<li>
+<p>When you press publish, &#8230;&#8203; I assume, some javascript will render all the html contents (index.html, rss/index.xml, yyyy/mm/dd/Title-whatever.html, author/login/index.html). Then wrap the whole rendered content into a git transaction and uploads that to github via it&#8217;s api using the token.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Sometimes it just changes nothing, but puts an empty commit onto the top of your git history!
@@ -198,10 +208,20 @@ For crying out loud: WHY!</p>
 </div>
 <div class="paragraph">
 <p>At least, I don&#8217;t have too much posts yet, if I want to migrate this whole thing onto a different blog engine.
-Comments and suggestions are welcome! At this stage, I say, this hubpress is really not reached the v1.0 maturity, and I need something which just works! I don&#8217;t want to suck to much with gui. I can accept that, to press the publish in the browser. But:
-. please work! Not like a cat&#8217;s mood! Work! Every freakin' time I press the publish button!
-. do not make mess in my git repo&#8217;s history and don&#8217;t make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of <strong>Every</strong> commit!
-. Oh, and please! If sg. works once, don&#8217;t make it wrong in the background! Eg. When I rendered the content yesterday, it considered the :hp-image: tag in the source. Now, It just disappeared, not working anymore! It means for me, I still depend on unreliable js-shit which comes from 3rd party content providers. I don&#8217;t want to make that Faustian deal!</p>
+Comments and suggestions are welcome! At this stage, I say, this hubpress is really not reached the v1.0 maturity, and I need something which just works! I don&#8217;t want to suck to much with gui. I can accept that, to press the publish in the browser. But:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>please work! Not like a cat&#8217;s mood! Work! Every freakin' time I press the publish button!</p>
+</li>
+<li>
+<p>do not make mess in my git repo&#8217;s history and don&#8217;t make unneccesary changes! If I watch the commits on my git repo, I want to see commits which makes sense. In case of <strong>Every</strong> commit!</p>
+</li>
+<li>
+<p>Oh, and please! If sg. works once, don&#8217;t make it wrong in the background! Eg. When I rendered the content yesterday, it considered the :hp-image: tag in the source. Now, It just disappeared, not working anymore! It means for me, I still depend on unreliable js-shit which comes from 3rd party content providers. I don&#8217;t want to make that Faustian deal!</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Af any of you have a better suggestion: comments are welcome!</p>
