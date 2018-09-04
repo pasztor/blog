@@ -6,12 +6,12 @@
     "cname": ""
   },
   "theme": {
-    "name": "uno"
+    "name": "uno-zen"
   },
   "urls": {
     "site": "https://pasztor.github.io/blog",
     "hubpress": "https://pasztor.github.io/blog",
-    "theme": "//pasztor.github.io/blog/themes/roon",
+    "theme": "//pasztor.github.io/blog/themes/uno",
     "images": "https://pasztor.github.io/blog/images"
   },
   "initialisationConfigComponent": {
