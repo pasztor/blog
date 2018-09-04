@@ -61,8 +61,8 @@ The classical _installation_ procedure in this case is simple:
 . Clone your repo to your PC. For those who may not know me well enough I more like cli tools over gui tools. Cli tools guarantee you a way to automate steps and repeat steps. Or repeat them many times every time with a very tiny difference. Whatever you want. cli is limit is only your imagination! Even if I don't want to clone this repo often, I may want to do things in my working copy, so it's kind of a neccessary step to do this. So, I just run the `git clone <repourl>` command in my terminal.
 . edit your ˙hubpress/config.json` file. The mandatory fields what you have to fill at this step is: `username` which is your github account's loginname, and `repositoryName` which was `blog` in my case.
  .. `git add hubpress/config.json`
- .. git commit
- .. git push
+ .. `git commit`
+ .. `git push`
 
 Now your blog is ready to use.
 
