@@ -1,0 +1,33 @@
+= Első bejegyzés
+
+:hp-image: /blog/images/firstentrybg.jpg
+:published_at: 2018-09-02
+:hp-tags: Blog, CV
+:hp-alt-title: First Entry
+
+toc::[]
+
+== Curriculum Vitae/hu == avagy mi a fenének is csináltam ezt blogot, meg miért pont így és ide
+
+Azért szántam rá az időt erre a blogmotorra, a bekonfigurálására, stb. mivel szerettem volna egy felhőszolgáltatótól független módszert arra, hogy közzétegyem, amit közzé szeretnék tenni. Ha valaki ismeri a git működését, az tudja, hogy ez ebben a formában miért független és jó így. Aki meg nem, azokat nem untatom a technikai részletekkel! ;-)
+
+Tipikusan ilyen dolgok voltak a Pestre / Dublinba költözésemmel kapcsolatos élmények, amelyeket anno szívesen osztottam meg sztorik és képek kiséretében. De szívesen mesélek a lekűzdött technikai problémákról. Ezek az utóbbi időben rendszerint az OmniOS-en töltött kalandozásaimat jelentik. A fényképalbumok valószínűleg továbbra is FB-albumra vagy épp google photos albumra mutató linkeket fognak jelenteni. (Az eredetik úgyis megvannak a nas-on)
+Ami miatt viszont a blogmotor ötlete megtetszett: nem csak beleírok #blog címkéket a szövegbe ezek után, hanem a tag-eket valóban rátszi (reményeim szerint) a bejegyzéseimre, és ennek megfelelően lehet bennük akár keresni is.
+
+Ami már csak azért is jó, mert sokszor szembesültem én magam is avval, hogy de jó lett volna, ha anno ezt megírom és nem újra kell kitaláljam nulláról google / stackoverflow és más woodo segítségével, hogy elsőre hogy is oldottam meg. Nem mondom, néha volt, hogy nem találtam meg ugyanazt és másodjára egy sokkal elegánsabb megoldást találtam ugyanarra a problémára. De ilyenkor csak az emlékezetem marad támpontnak a kétféle megoldás összehasonlítására. Különben is: később semmi sem akadályoz, még ha tudod is a megoldást (magadnak köszönhetően), hogy egy még szebb megoldást találj, egy már ismert problémára.
+
+Köszönöm a figyelmet!
+Kéremkapcsojjaki'!
+
+== Curriculum Vitae/en == why on earth did I this blog, why this way, why here
+
+I spent the time and effort to configure and make work this blog engine, because I wanted a cloud-provider independent way to publish what I want to publish. Who nows git's modus operandi will also know why this solution is an independent one and why could this work. Thy who don't know git that deep, well I don't want to bother them with technical details! ;-)
+
+Typical topics around my blogposts will/were be the moments and stories when I moved to Budapest / Dublin. Those were events in my life I liked to share with details in the stories, or just publish some pictures. However I also like to share how did I solved technical issues which lately means my adventures regarding OmniOS. Probably I will share photo albums via links to my facebook albums or google photos albums. (I have the originals on my nas.)
+The reason why I thought a blog-engine would be a good idea: From now on, I don't just write #tag into my posts, but (hopefully) the engine will track my tags and later you can look up on them.
+
+Which is good, because I faced with the scenario many times when it could be handy If I already wrote what did I solved and how, and I don't have to reinvent the wheel again, and again using google / stackoverflow or other mumbo-jumbo. And maybe the second solution is not as good (eg. because of time pressure) like the first one was. I don't say, that sometimes I did not found a better or more elegant solution on the second time. I'm just sayin' that only my unreliable memories is my basis to compare the two solution.
+And nothing blocks you later, (even if you already know your solution because of your own cookbook aka. blog), to improve that!
+
+Thanks for reading!
+That's all folks!
