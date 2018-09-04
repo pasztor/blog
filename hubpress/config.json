@@ -6,12 +6,12 @@
     "cname": ""
   },
   "theme": {
-    "name": "the-shell"
+    "name": "casper"
   },
   "urls": {
     "site": "https://pasztor.github.io/blog",
     "hubpress": "https://pasztor.github.io/blog",
-    "theme": "//pasztor.github.io/blog/themes/uno-zen",
+    "theme": "//pasztor.github.io/blog/themes/the-shell",
     "images": "https://pasztor.github.io/blog/images"
   },
   "initialisationConfigComponent": {
