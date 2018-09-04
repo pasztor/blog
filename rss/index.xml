@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 23:46:14 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Sep 2018 23:54:31 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <!-- toc disabled -->
 </div>
@@ -227,10 +227,12 @@ Comments and suggestions are welcome! At this stage, I say, this hubpress is rea
 <p>If any of you have a better suggestion: comments are welcome!</p>
 </div>
 </div>
-</div>]]></description><link>https://pasztor.github.io/blog/2018/09/05/Metaentry.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/05/Metaentry.html</guid><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Első bejegyzés]]></title><description><![CDATA[<div id="preamble">
-<div class="sectionbody">
-<!-- toc disabled -->
-</div>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/09/05/Metaentry.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/05/Metaentry.html</guid><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[First Entry]]></title><description><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_curriculum_vitae_hu_avagy_mi_a_fenének_is_csináltam_ezt_blogot_meg_miért_pont_így_és_ide">Curriculum Vitae/hu == avagy mi a fenének is csináltam ezt blogot, meg miért pont így és ide</a></li>
+<li><a href="#_curriculum_vitae_en_why_on_earth_did_i_this_blog_why_this_way_why_here">Curriculum Vitae/en == why on earth did I this blog, why this way, why here</a></li>
+</ul>
 </div>
 <div class="sect1">
 <h2 id="_curriculum_vitae_hu_avagy_mi_a_fenének_is_csináltam_ezt_blogot_meg_miért_pont_így_és_ide">Curriculum Vitae/hu == avagy mi a fenének is csináltam ezt blogot, meg miért pont így és ide</h2>
@@ -270,4 +272,4 @@ And nothing blocks you later, (even if you already know your solution because of
 That&#8217;s all folks!</p>
 </div>
 </div>
-</div>]]></description><link>https://pasztor.github.io/blog/2018/09/02/Elso-bejegyzes.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/02/Elso-bejegyzes.html</guid><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Sun, 02 Sep 2018 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/09/02/First-Entry.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/02/First-Entry.html</guid><category><![CDATA[Blog]]></category><category><![CDATA[CV]]></category><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Sun, 02 Sep 2018 00:00:00 GMT</pubDate></item></channel></rss>
