@@ -7,10 +7,12 @@
 
 = Első bejegyzés
 
+
 :hp-image: /blog/images/firstentrybg.jpg
 :published_at: 2018-09-02
 :hp-tags: Blog, CV
 :hp-alt-title: First Entry
+
 
 == Curriculum Vitae/hu == avagy mi a fenének is csináltam ezt blogot, meg miért pont így és ide
 
