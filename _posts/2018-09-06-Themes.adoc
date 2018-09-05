@@ -186,7 +186,7 @@ Cons:
 
 * Finding out how to open the opening page, could be tricky, if you don't know where to click :)
 * No media share icons at the entries. In other circumstances I would say, it's a showstopper, but... Since this was the only one, which follow nicele the browser's width, It won!
-
+* Kinda too bright. Even the opening page, and everything else looks like overexposed, or if the picture would have been taken with a very high ISO value.
 
 image::/blog/images/Blog-UnoZen-Opening_page.png[Uno Zen - Opening Page]
 image::/blog/images/Blog-UnoZen-Opening_page2.png[Uno Zen - Opening Page - Opened]
