@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 00:00:18 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="preamble">
-<div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 00:05:58 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_foreword">Foreword</a></li>
 <li><a href="#_előszó">Előszó</a></li>
@@ -12,8 +10,6 @@
 <li><a href="#_disqus">Disqus</a></li>
 <li><a href="#_afterlife">Afterlife</a></li>
 </ul>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="_foreword">Foreword</h2>
