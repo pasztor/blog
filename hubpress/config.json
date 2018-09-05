@@ -11,7 +11,7 @@
   "urls": {
     "site": "https://pasztor.github.io/blog",
     "hubpress": "https://pasztor.github.io/blog",
-    "theme": "//pasztor.github.io/blog/themes/",
+    "theme": "//pasztor.github.io/blog/themes/casper",
     "images": "https://pasztor.github.io/blog/images"
   },
   "initialisationConfigComponent": {
@@ -35,7 +35,7 @@
     "cover": "/blog/images/firstentrybg.jpg",
     "delay": "",
     "postsPerPage": "5",
-    "blogPath": "./",
+    "blogPath": "blog/",
     "googleAnalytics": "",
     "disqus": "psztorgyrgy"
   },
