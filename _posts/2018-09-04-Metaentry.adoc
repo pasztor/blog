@@ -8,7 +8,7 @@
 :published_at: 2018-09-04
 :hp-tags: Blog, git, github, github_pages, hubpress
 :hp-alt-title: Metaentry
-:hp-image: /blog/images/firstentrybg.jpg
+:hp-image: /blog/images/techbg.jpg
 :toc: 
 
 == Foreword
