@@ -1,12 +1,16 @@
-= Adding Images
-
-To add images to your blog posts:
-
-. Commit images to this directory.
-. In your blog post, use the following basic AsciiDoc syntax:
-+
-[source,AsciiDoc]
-----
-image::http://github.com/<username>/<repositoryName>/images/<filename>[]
-----
-. See http://asciidoctor.org/docs/asciidoc-writers-guide/ for complex examples of Image syntax.
+= Source of image files:
+* gyu.jpeg it's me. I don't exactly remember, maybe Csonti is the author
+* firstentrybg.jpg it's me again, but Gábor is the author
+* https://wallpaper.wiki/matrix-backgrounds-free-download.html/matrix-moving-desktop-background-wallpaper/[techbg.jpg]
+// = Adding Images
+// 
+// To add images to your blog posts:
+// 
+// . Commit images to this directory.
+// . In your blog post, use the following basic AsciiDoc syntax:
+// +
+// [source,AsciiDoc]
+// ----
+// image::http://github.com/<username>/<repositoryName>/images/<filename>[]
+// ----
+// . See http://asciidoctor.org/docs/asciidoc-writers-guide/ for complex examples of Image syntax.
