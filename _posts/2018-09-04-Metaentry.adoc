@@ -8,9 +8,8 @@
 :published_at: 2018-09-04
 :hp-tags: Blog, git, github, github_pages, hubpress
 :hp-alt-title: Metaentry
-:toc: macro
-
-toc::[]
+:hp-image: /blog/images/firstentrybg.jpg
+:toc: 
 
 == Foreword
 
@@ -118,3 +117,15 @@ Comments and suggestions are welcome! At this stage, I say, this hubpress is rea
 . Oh, and please! If sg. works once, don't make it wrong in the background! Eg. When I rendered the content yesterday, it considered the :hp-image: tag in the source. Now, It just disappeared, not working anymore! It means for me, I still depend on unreliable js-shit which comes from 3rd party content providers. I don't want to make that Faustian deal!
 
 If any of you have a better suggestion: comments are welcome!
+
+== Post-notes
+
+After a couple of hours of try-and-error cycles, it seems I solved some of the mentioned problems:
+
+* Better if you have explicitly set the theme in the settings
+* Set something explicit inside of the _blog path_ variable. Well, it means, your index document goes one level deeper in the directory path, but you can https://github.com/pasztor/blog/blob/gh-pages/index.html[circumvent it] easily
+* Well, now at least this Schröedinger's cat seems more often have a better mood, and it results more reliable working. But I swear, I haven't seen this mentioned in the docs. I was so desperate I almost read every entry in the https://hubpress.gitbooks.io/hubpress-knowledgebase/content/[knowledge base].
+* Toc and hp-image is also working:
+ ** For toc, it seems you have to use the default `:toc:` instead of `:toc: macro` + `toc::[]` like it was mentioned https://hubpress.gitbooks.io/hubpress-knowledgebase/content/write/titles_and_headings.html[here, in the *why is the save button not working* entry].
+ ** For macros in general: *Never leave an empty line between your _H1_ heading and your macro definition lines!*
+
