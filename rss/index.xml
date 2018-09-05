@@ -1,4 +1,532 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 22:32:10 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="toc" class="toc">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 22:50:54 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Themes]]></title><description><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_foreword">Foreword</a></li>
+<li><a href="#_casper">casper</a></li>
+<li><a href="#_ghostium">ghostium</a></li>
+<li><a href="#_ichi">ichi</a></li>
+<li><a href="#_roon">roon</a></li>
+<li><a href="#_saga">saga</a></li>
+<li><a href="#_the_shell">the-shell</a></li>
+<li><a href="#_uno">uno</a></li>
+<li><a href="#_uno_zen">uno-zen</a></li>
+<li><a href="#_summary">summary</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_foreword">Foreword</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As I could defeat a couple of hubpress problems or at least circumvent them, I decided at the end, after testing kinda all the themes, that I don&#8217;t like them.
+I had some problem with every one of them. Every one of them has some pros and cons, but I was not fully satisfied with any of them.</p>
+</div>
+<div class="paragraph">
+<p>Besides, I haven&#8217;t found any site, where I could check some kind of preview how they look like in action.</p>
+</div>
+<div class="paragraph">
+<p>This write will give you that:</p>
+</div>
+<div class="paragraph">
+<p>Pictures about the hubpress themes, and some highly subjective comparison.</p>
+</div>
+<div class="paragraph">
+<p>So my idea is: I&#8217;ll make a list here, with screenshots, and descriptions of every theme, and write down what is I like about that theme, and why I don&#8217;t like it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_casper">casper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the <em>default</em> theme.</p>
+</div>
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nice opening page</p>
+</li>
+<li>
+<p>The font is kinda readble and large enough, not tireing my eyes</p>
+</li>
+<li>
+<p>Facebook share link</p>
+</li>
+<li>
+<p>Twitter share link</p>
+</li>
+<li>
+<p>Status bar showing the reading percent on the top of the screen</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The content is centered. Everything is in the middle of the page. If you resize your browser horizontally, the text not growing with it. I don&#8217;t like that! &#8594; <em>showstopper</em></p>
+</li>
+<li>
+<p>No G+ share &#8594; <em>showstopper</em></p>
+</li>
+<li>
+<p>No tags management &#8594; <em>showstopper</em></p>
+</li>
+<li>
+<p>RSS links to feedly instead of the site&#8217;s own rss &#8594; <em>showstopper</em>, maybe easy to fix</p>
+</li>
+<li>
+<p>The share links on the top of the screen only appear, when you scroll down into the content!</p>
+</li>
+<li>
+<p>No explicit share icons at the end of the blog entry where the share usually are</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I think, the thinking process is this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read an article</p>
+</li>
+<li>
+<p>Decide if I like that</p>
+</li>
+<li>
+<p>Share</p>
+</li>
+<li>
+<p>Maybe comment</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The share happens <strong>after</strong> I&#8217;ve read the article. So the share button should be below the article IMHO.</p>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Casper-Opening_page.png" alt="Casper - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Casper-Entry-Top.png" alt="Casper - Entry Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Casper-Entry-Bottom.png" alt="Casper - Entry Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ghostium">ghostium</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tab bar on the opening page</p>
+</li>
+<li>
+<p>Tags handling</p>
+</li>
+<li>
+<p>Facebook share link</p>
+</li>
+<li>
+<p>Twitter share link</p>
+</li>
+<li>
+<p>G+ share link</p>
+</li>
+<li>
+<p>Working xml link to rss feed</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opening page cuts an interesting part of my cover pic, and not in a good way</p>
+</li>
+<li>
+<p>No status bar of reading percentage</p>
+</li>
+<li>
+<p>Content is focused in the middle of the page</p>
+</li>
+<li>
+<p>Coverpic not working on the entries (<code>:hp-image:</code>) <em>showstopper</em> I found so nice cover pics for the topics! :D</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ghostium-Opening_page.png" alt="Ghostium - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ghostium-Opening-Sidebar.png" alt="Ghostium - Opening Page - Sidebar">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ghostium-Tags.png" alt="Ghostium - Tags">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ghostium-Entry-Top.png" alt="Ghostium - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ghostium-Entry-Bottom.png" alt="Ghostium - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ichi">ichi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nice-ish opening page, except the tab bar is on the right side. IMHO It&#8217;s irrational for those who read left to right.</p>
+</li>
+<li>
+<p>Nice namecard-ish part at the end of the post, with nice sharing icons</p>
+</li>
+<li>
+<p>Tag handling</p>
+</li>
+<li>
+<p>Nice Namecardish thing at the bottom of the entries. I love them.</p>
+</li>
+<li>
+<p>Also really nice share buttons</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No coverpic at the blog entries</p>
+</li>
+<li>
+<p>No rss link</p>
+</li>
+<li>
+<p>Only a handsome of the social media links appears on the opening page</p>
+</li>
+<li>
+<p>Puts a bunch of disfunctional links to the opening page. I mean, I don&#8217;t mind the <em>home</em> or the <em>about</em> icon. But if there is no that kind of content in the repo, let me give an opportunity to disable them.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ichi-Opening_page.png" alt="Ichi - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ichi-Tags.png" alt="Ichi - Tags">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ichi-Entry-Top.png" alt="Ichi - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Ichi-Entry-Bottom.png" alt="Ichi - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_roon">roon</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Disgusting opening page!!!</p>
+</div>
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>rss link on the opening page</p>
+</li>
+<li>
+<p>Working cover pic</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This opening page is a horror!</p>
+</li>
+<li>
+<p>Style is not bad, but&#8230;&#8203; Nothing impressive. To much square.</p>
+</li>
+<li>
+<p>No tags! <em>showstopper</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Roon-Opening-Page-Top.png" alt="Roon - Opening Page - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Roon-Opening-Page-Bottom.png" alt="Roon - Opening Page - Bottom">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Roon-Entry-Top.png" alt="Roon - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Roon-Entry-Bottom.png" alt="Roon - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_saga">saga</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Disfunctional!</p>
+</div>
+<div class="paragraph">
+<p>Image proof:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Saga-Opening-Page.png" alt="Saga - Opening Page">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_shell">the-shell</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s almost a winner. Kinda nice, but&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nice opening page</p>
+</li>
+<li>
+<p>tags are working</p>
+</li>
+<li>
+<p>shareing icons for Twitter, Faceboog, G+</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The usual centered style</p>
+</li>
+<li>
+<p>No rss link</p>
+</li>
+<li>
+<p>No social media links</p>
+</li>
+<li>
+<p>The shareing icons are after the disqus section&#8230;&#8203; I would change the order!</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-TheShell-Opening_page.png" alt="The Shell - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-TheShell-Tag.png" alt="The Shell - Tags">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-TheShell-Entry-Top.png" alt="The Shell - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-TheShell-Entry-Bottom.png" alt="The Shell - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uno">uno</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nice opening page, but practically disfunctional&#8230;&#8203;
+I could make screenshots via direct links, but I won&#8217;t spend much more time with a disfunctional theme.</p>
+</div>
+<div class="paragraph">
+<p>Images:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Uno-Opening_page.png" alt="Uno - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Uno-Entry-Top.png" alt="Uno - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-Uno-Entry-Bottom.png" alt="Uno - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uno_zen">uno-zen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I think I kinda stay with this, even if it has some really bugging problem&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Pros:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nice Opening page</p>
+</li>
+<li>
+<p>Clean-ish design</p>
+</li>
+<li>
+<p>Nice, and readable fonts</p>
+</li>
+<li>
+<p>Grows with the browser width! This was the only one!</p>
+</li>
+<li>
+<p>Nice social media icon set. Practically, I saw everything what I configured on the settings page!</p>
+</li>
+<li>
+<p>Working tags!</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finding out how to open the opening page, could be tricky, if you don&#8217;t know where to click :)</p>
+</li>
+<li>
+<p>No media share icons at the entries. In other circumstances I would say, it&#8217;s a showstopper, but&#8230;&#8203; Since this was the only one, which follow nicele the browser&#8217;s width, It won!</p>
+</li>
+<li>
+<p>Kinda too bright. Even the opening page, and everything else looks like overexposed, or if the picture would have been taken with a very high ISO value.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-UnoZen-Opening_page.png" alt="Uno Zen - Opening Page">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-UnoZen-Opening_page2.png" alt="Uno Zen - Opening Page - Opened">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-UnoZen-Tags.png" alt="Uno Zen - Tags">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-UnoZen-Entry-Top.png" alt="Uno Zen - Entry - Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/Blog-UnoZen-Entry-Bottom.png" alt="Uno Zen - Entry - Bottom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary">summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As I said in the foreword, there are small annoying things in every theme. But finally I stayed at uno-zen. On the long term, if I could combine uno zen&#8217;s closing, with the ichi theme&#8217;s namecard+ shareing icon section, that would be my allwinner.
+Maybe, I liked <em>The Shell</em> 's font and style a little bit better, but the centered style and missing coverpic on the entries are also showstoppers.</p>
+</div>
+</div>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/09/06/Themes.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/09/06/Themes.html</guid><category><![CDATA[Blog]]></category><category><![CDATA[themes]]></category><category><![CDATA[hubpress]]></category><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Thu, 06 Sep 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Metaentry]]></title><description><![CDATA[<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_foreword">Foreword</a></li>
