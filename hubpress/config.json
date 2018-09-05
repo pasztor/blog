@@ -6,12 +6,12 @@
     "cname": ""
   },
   "theme": {
-    "name": "ghostium"
+    "name": "ichi"
   },
   "urls": {
     "site": "https://pasztor.github.io/blog",
     "hubpress": "https://pasztor.github.io/blog",
-    "theme": "//pasztor.github.io/blog/themes/uno",
+    "theme": "//pasztor.github.io/blog/themes/ghostium",
     "images": "https://pasztor.github.io/blog/images"
   },
   "initialisationConfigComponent": {
