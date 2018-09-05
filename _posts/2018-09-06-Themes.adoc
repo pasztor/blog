@@ -1,7 +1,7 @@
 = Themes
 :published_at: 2018-09-06
 :hp-tags: Blog, themes, hubpress
-:hp-alt-title: Metaentry
+:hp-alt-title: Themes
 :hp-image: /blog/images/techbg.jpg
 :toc: 
 
