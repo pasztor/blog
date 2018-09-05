@@ -11,7 +11,7 @@
   "urls": {
     "site": "https://pasztor.github.io/blog",
     "hubpress": "https://pasztor.github.io/blog",
-    "theme": "//pasztor.github.io/blog/themes/ichi",
+    "theme": "//pasztor.github.io/blog/themes/roon",
     "images": "https://pasztor.github.io/blog/images"
   },
   "initialisationConfigComponent": {
