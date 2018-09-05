@@ -1,0 +1,200 @@
+= Themes
+:published_at: 2018-09-06
+:hp-tags: Blog, themes, hubpress
+:hp-alt-title: Metaentry
+:hp-image: /blog/images/techbg.jpg
+:toc: 
+
+== Foreword
+
+As I could defeat a couple of hubpress problems or at least circumvent them, I decided at the end, after testing kinda all the themes, that I don't like them.
+I had some problem with every one of them. Every one of them has some pros and cons, but I was not fully satisfied with any of them.
+
+Besides, I haven't found any site, where I could check some kind of preview how they look like in action.
+
+This write will give you that:
+
+Pictures about the hubpress themes, and some highly subjective comparison.
+
+So my idea is: I'll make a list here, with screenshots, and descriptions of every theme, and write down what is I like about that theme, and why I don't like it.
+
+== casper
+
+This is the _default_ theme.
+
+Pros:
+
+* Nice opening page
+* The font is kinda readble and large enough, not tireing my eyes
+* Facebook share link
+* Twitter share link
+* Status bar showing the reading percent on the top of the screen
+
+Cons:
+
+* The content is centered. Everything is in the middle of the page. If you resize your browser horizontally, the text not growing with it. I don't like that! -> _showstopper_
+* No G+ share -> _showstopper_
+* No tags management -> _showstopper_
+* RSS links to feedly instead of the site's own rss -> _showstopper_, maybe easy to fix
+* The share links on the top of the screen only appear, when you scroll down into the content!
+* No explicit share icons at the end of the blog entry where the share usually are
+
+I think, the thinking process is this:
+
+* Read an article
+* Decide if I like that
+* Share
+* Maybe comment
+
+The share happens *after* I've read the article. So the share button should be below the article IMHO.
+
+Images:
+
+image::/blog/images/Blog-Casper-Opening_page.png[Casper - Opening Page]
+image::/blog/images/Blog-Casper-Entry-Top.png[Casper - Entry Top]
+image::/blog/images/Blog-Casper-Entry-Bottom.png[Casper - Entry Bottom]
+
+== ghostium
+
+Pros:
+
+* Tab bar on the opening page
+* Tags handling
+* Facebook share link
+* Twitter share link
+* G+ share link
+* Working xml link to rss feed
+
+Cons:
+
+* Opening page cuts an interesting part of my cover pic, and not in a good way
+* No status bar of reading percentage
+* Content is focused in the middle of the page
+* Coverpic not working on the entries (`:hp-image:`) _showstopper_ I found so nice cover pics for the topics! :D
+
+Images:
+
+image::/blog/images/Blog-Ghostium-Opening_page.png[Ghostium - Opening Page]
+image::/blog/images/Blog-Ghostium-Opening-Sidebar.png[Ghostium - Opening Page - Sidebar]
+image::/blog/images/Blog-Ghostium-Tags.png[Ghostium - Tags]
+image::/blog/images/Blog-Ghostium-Entry-Top.png[Ghostium - Entry - Top]
+image::/blog/images/Blog-Ghostium-Entry-Bottom.png[Ghostium - Entry - Bottom]
+
+== ichi
+
+Pros:
+
+* Nice-ish opening page, except the tab bar is on the right side. IMHO It's irrational for those who read left to right.
+* Nice namecard-ish part at the end of the post, with nice sharing icons
+* Tag handling
+* Nice Namecardish thing at the bottom of the entries. I love them.
+* Also really nice share buttons
+
+Cons:
+
+* No coverpic at the blog entries
+* No rss link
+* Only a handsome of the social media links appears on the opening page
+* Puts a bunch of disfunctional links to the opening page. I mean, I don't mind the _home_ or the _about_ icon. But if there is no that kind of content in the repo, let me give an opportunity to disable them.
+
+Images:
+
+image::/blog/images/Blog-Ichi-Opening_page.png[Ichi - Opening Page]
+image::/blog/images/Blog-Ichi-Tags.png[Ichi - Tags]
+image::/blog/images/Blog-Ichi-Entry-Top.png[Ichi - Entry - Top]
+image::/blog/images/Blog-Ichi-Entry-Bottom.png[Ichi - Entry - Bottom]
+
+== roon
+
+Disgusting opening page!!!
+
+Pros:
+
+* rss link on the opening page
+* Working cover pic
+
+Cons:
+
+* This opening page is a horror!
+* Style is not bad, but... Nothing impressive. To much square.
+* No tags! _showstopper_
+
+Images:
+
+image::/blog/images/Blog-Roon-Opening-Page-Top.png[Roon - Opening Page - Top]
+image::/blog/images/Blog-Roon-Opening-Page-Bottom.png[Roon - Opening Page - Bottom]
+image::/blog/images/Blog-Roon-Entry-Top.png[Roon - Entry - Top]
+image::/blog/images/Blog-Roon-Entry-Bottom.png[Roon - Entry - Bottom]
+
+== saga
+
+Disfunctional!
+
+Image proof:
+
+image::/blog/images/Blog-Saga-Opening-Page.png[Saga - Opening Page]
+
+== the-shell
+
+It's almost a winner. Kinda nice, but...
+
+Pros:
+
+* Nice opening page
+* tags are working
+* shareing icons for Twitter, Faceboog, G+
+
+Cons:
+
+* The usual centered style
+* No rss link
+* No social media links
+* The shareing icons are after the disqus section... I would change the order!
+
+Images:
+
+image::/blog/images/Blog-TheShell-Opening_page.png[The Shell - Opening Page]
+image::/blog/images/Blog-TheShell-Tag.png[The Shell - Tags]
+image::/blog/images/Blog-TheShell-Entry-Top.png[The Shell - Entry - Top]
+image::/blog/images/Blog-TheShell-Entry-Bottom.png[The Shell - Entry - Bottom]
+
+== uno
+
+Nice opening page, but practically disfunctional...
+I could make screenshots via direct links, but I won't spend much more time with a disfunctional theme.
+
+Images:
+
+image::/blog/images/Blog-Uno-Opening_page.png[Uno - Opening Page]
+image::/blog/images/Blog-Uno-Entry-Top.png[Uno - Entry - Top]
+image::/blog/images/Blog-Uno-Entry-Bottom.png[Uno - Entry - Bottom]
+
+== uno-zen
+
+I think I kinda stay with this, even if it has some really bugging problem...
+
+Pros:
+
+* Nice Opening page
+* Clean-ish design
+* Nice, and readable fonts
+* Grows with the browser width! This was the only one!
+* Nice social media icon set. Practically, I saw everything what I configured on the settings page!
+* Working tags!
+
+Cons:
+
+* Finding out how to open the opening page, could be tricky, if you don't know where to click :)
+* No media share icons at the entries. In other circumstances I would say, it's a showstopper, but... Since this was the only one, which follow nicele the browser's width, It won!
+
+
+image::/blog/images/Blog-UnoZen-Opening_page.png[Uno Zen - Opening Page]
+image::/blog/images/Blog-UnoZen-Opening_page2.png[Uno Zen - Opening Page - Opened]
+image::/blog/images/Blog-UnoZen-Tags.png[Uno Zen - Tags]
+image::/blog/images/Blog-UnoZen-Entry-Top.png[Uno Zen - Entry - Top]
+image::/blog/images/Blog-UnoZen-Entry-Bottom.png[Uno Zen - Entry - Bottom]
+
+== summary
+
+As I said in the foreword, there are small annoying things in every theme. But finally I stayed at uno-zen. On the long term, if I could combine uno zen's closing, with the ichi theme's namecard+ shareing icon section, that would be my allwinner.
+Maybe, I liked _The Shell_ 's font and style a little bit better, but the centered style and missing coverpic on the entries are also showstoppers.
