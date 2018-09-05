@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="//pasztor.github.io/blog/themes/casper/assets/built/screen.css?v=1536107190743" />
+    <link rel="stylesheet" type="text/css" href="//pasztor.github.io/blog/themes/casper/assets/built/screen.css?v=1536108211427" />
 
     <link rel="canonical" href="https://pasztor.github.io/blog/2018/09/04/Metaentry.html" />
     <meta name="referrer" content="origin" />
@@ -17,8 +17,9 @@
     <meta property="og:site_name" content="Gyu&#x27;s personal blog" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Metaentry" />
-    <meta property="og:description" content="Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up this" />
+    <meta property="og:description" content="Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Post-notes Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up" />
     <meta property="og:url" content="https://pasztor.github.io/blog/2018/09/04/Metaentry.html" />
+    <meta property="og:image" content="/blog/images/firstentrybg.jpg" />
     <meta property="article:published_time" content="2018-09-04T00:00:00.000Z" />
     <meta property="article:tag" content="Blog" />
     <meta property="article:tag" content="git" />
@@ -26,10 +27,11 @@
     <meta property="article:tag" content="github_pages" />
     <meta property="article:tag" content="hubpress" />
     
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Metaentry" />
-    <meta name="twitter:description" content="Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up this" />
+    <meta name="twitter:description" content="Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Post-notes Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up" />
     <meta name="twitter:url" content="https://pasztor.github.io/blog/2018/09/04/Metaentry.html" />
+    <meta name="twitter:image:src" content="/blog/images/firstentrybg.jpg" />
     
     <script type="application/ld+json">
 {
@@ -45,8 +47,9 @@
     "headline": "Metaentry",
     "url": "https://pasztor.github.io/blog/2018/09/04/Metaentry.html",
     "datePublished": "2018-09-04T00:00:00.000Z",
+    "image": "/blog/images/firstentrybg.jpg",
     "keywords": "Blog, git, github, github_pages, hubpress",
-    "description": "Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up this"
+    "description": "Table of Contents Foreword Előszó Which project owns your github pages domain The environment The installation and setup of hubpress Settings and relative/absolute urls Disqus Afterlife Post-notes Foreword Well I thought it could be a good idea to write down my experiences how did I configured and set up"
 }
     </script>
 
@@ -94,7 +97,7 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post tag-Blog tag-git tag-github tag-github-pages tag-hubpress no-image">
+        <article class="post-full post tag-Blog tag-git tag-github tag-github-pages tag-hubpress ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -103,12 +106,12 @@
                 <h1 class="post-full-title">Metaentry</h1>
             </header>
 
+            <figure class="post-full-image" style="background-image: url(/blog/images/firstentrybg.jpg)">
+            </figure>
 
             <section class="post-full-content">
-                <div id="preamble">
-<div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
+                <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_foreword">Foreword</a></li>
 <li><a href="#_előszó">Előszó</a></li>
@@ -118,9 +121,8 @@
 <li><a href="#_settings_and_relative_absolute_urls">Settings and relative/absolute urls</a></li>
 <li><a href="#_disqus">Disqus</a></li>
 <li><a href="#_afterlife">Afterlife</a></li>
+<li><a href="#_post_notes">Post-notes</a></li>
 </ul>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="_foreword">Foreword</h2>
@@ -347,6 +349,40 @@ Comments and suggestions are welcome! At this stage, I say, this hubpress is rea
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_post_notes">Post-notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After a couple of hours of try-and-error cycles, it seems I solved some of the mentioned problems:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Better if you have explicitly set the theme in the settings</p>
+</li>
+<li>
+<p>Set something explicit inside of the <em>blog path</em> variable. Well, it means, your index document goes one level deeper in the directory path, but you can <a href="https://github.com/pasztor/blog/blob/gh-pages/index.html">circumvent it</a> easily</p>
+</li>
+<li>
+<p>Well, now at least this Schröedinger&#8217;s cat seems more often have a better mood, and it results more reliable working. But I swear, I haven&#8217;t seen this mentioned in the docs. I was so desperate I almost read every entry in the <a href="https://hubpress.gitbooks.io/hubpress-knowledgebase/content/">knowledge base</a>.</p>
+</li>
+<li>
+<p>Toc and hp-image is also working:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For toc, it seems you have to use the default <code>:toc:</code> instead of <code>:toc: macro</code> + <code>toc::[]</code> like it was mentioned <a href="https://hubpress.gitbooks.io/hubpress-knowledgebase/content/write/titles_and_headings.html">here, in the <strong>why is the save button not working</strong> entry</a>.</p>
+</li>
+<li>
+<p>For macros in general: <strong>Never leave an empty line between your <em>H1</em> heading and your macro definition lines!</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
             </section>
 
 
@@ -454,7 +490,7 @@ Comments and suggestions are welcome! At this stage, I say, this hubpress is rea
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="//pasztor.github.io/blog/themes/casper/assets/js/jquery.fitvids.js?v=1536107190743"></script>
+    <script type="text/javascript" src="//pasztor.github.io/blog/themes/casper/assets/js/jquery.fitvids.js?v=1536108211427"></script>
 
 
     <script>
