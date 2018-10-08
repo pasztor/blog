@@ -1,0 +1,120 @@
+= History of a migration
+:published_at: 2018-10-08
+:hp-tags: Blog, OmniOS, NAS, n54l, supermicro, sr-iov, xen, alpine
+:hp-alt-title: History of a migration
+:toc:
+
+== Foreword
+
+I've recently migrated my home NAS from an old HP microserver N54L to a custom built machine. This article and the following couple of articles will tell the story of that.
+
+This will be a long story and practically I'm done with the most of the tasks. So now I just try to remember what and how did I to manage the transition. I'm not a newbie, so notes were taken, where I can show what commands I've run, what result did them gave back, and hopefully I'll remember why I've did the things the way I did, etc.
+
+In this first article I will explain only the from and to states. What was my original NAS's architecture and what is the achieved goal on the new one.
+
+== The old N54L
+
+The old NAS was a HP Microserver N54L. The host OS was OmniOS 151014. Yes, I know it's quite old. But, I didn't have a chance to upgrade that to the latest LTS. My plan was, that the migration will solve that problem. One of the bigest problems was, that I still had two VirtualBox VM's, and I still need at least one of the two.
+On the gz I had three ngz:r
+* sb,
+* omni,
+* vbox.
+
+The gz was running on a pendrive. All the data and ngz's were on the spinning disks. The pool name was just the textbook example: _tank_.
+
+The only extras in the hw:
+* RAM upgraded to 16GB DDR3 ECC
+* A PCI-E LSI hba was installed. Since the HP microserver uses the same SFF08087 connector as the LSI, it was not a big deal to use that instead of the motherboard's ports.
+* Since the LSI card has 8 ports, I could have a 5 WD Red disk raidz, and a Samsung 850 EVO SSD as zil and l2arc.
+
+When I had to give a name to the host, I didn't have any good idea, so the hostname became: oi.
+During the migration I renamed this to n54l. Still not a testimony of a huge fantasy, but at least it doesn't look like openindiana or OmnI.
+
+=== sb
+
+The sb was an old "SolarisBox"/"ShellBox". That was my "administration" interface. I don't like to have important stuff in the Global Zone itself. This was, where I managed my files locally with an mc, etc. Well, most of these functions could been abandoned by now, but some sentimental feelings hold me back to dispose of this ngz. Ah, and the other thing: this was the master of my home.intra dns zone 😁
+
+Originally, in the previous life of this nas, it was an OpenIndiana 151a9. So the sb was salvaged from that version. The rpool was on a previous pendrive. Just after a couple of years that pendrive just died. Since illumos-based systems have a dump (similar to Linux's swap) on the rpool, it was not unexpected. (Sorry for the double negative) But when that pendrive just died, I installed the 151014 OmniOS to the new pendrive. I saved what I could. The most important things were the zone configuration files.
+Thanks to this design, I just needed:
+* to zpool import tank on the new OS
+* re-create the zones based on the salveged config files
+* install gz-parts of virtualbox into the GZ
+
+So the downtime was only that long, while I bought a new pendrive.
+
+=== omni
+
+Since, the host OpenIndiana was replaced by OmniOS years ago, I installed another "ShellBox" to the system. Less packages, but more recent. And the important part was, that I could use some semi-offical package from the niksula.hut.fi repo. This was also a jumpbox, so I could logged in to my home network using mix of tunnels and TCP port forwards and ssh keys together.
+
+=== vbox
+
+As I already told, I didn't want to run any service on the GZ directly. That was the case with my VirtualBox VM's as well.
+I had two VM's in this zone:
+* monitor: A linux vm, running munin, icinga, and previously I had a redmine here, what I'd like to forget, I ever had 😁
+* fbsd: A freebsd VM. For my first babysteps with FreeBSD.
+
+== The new box
+
+I started the project more than a year ago. After I year I still was in the PoC state, so 1 or 2 months ago, I've just decided that I'll buy the new disks here, and do the migration.
+
+The project started with finding the right hardware. Since this is an upgrade at the same time I spent a lot of time with choosing the components:
+- Silverstone SST-DS380B, I've read about it somewhere at hup.hu
+- SuperMicro X10SDV-6C+-TLN4F Motherboard
+- Kingston KVR21R15D4K4/64 RAM 64 GB 2133 MHz DDR4 ECC Registered CL15 DIMM Kit (4 x 16 GB)
+- Samsung MZ-V6P512BW 960 PRO M.2-2280 512GB PCI Express 3.0 x4 NVMe Solid State Drive
+- Some salvaged pendrive for the Host OS 😁
+
+Since this motherboard has NICs which was made in the PCI SR-IOV era, I planned to use this with a Type1 Hypervisor, which can use these capabilities.
+
+I also bought a switch, so I can connect all the ports together, I can run speed tests, implement PoC network configurations. At least, I can have several vlans. So I bought a 'Cisco SG300-10P 8x10/100/1000 POE +2x UTP/SFP SRW2008P Gigabit Switch'.
+
+Well, I know that the motherboard has 10GE ports, but I check and haven't seen 10G managed switches for a reasonable price. For PoC purpose, this will be just enough.
+
+Most of the parts was given last year already. I used 3 old 750GB Samsung disks from my previous PC in the PoC phase, and started to implement the new system.
+
+=== The dom0
+
+As I said, I intended to use the benefits of the PCI SR-IOV interfaces. This way I can give a complete PCI virtual function to every VM on the host. Since the motherboard also has some kind of Xeon CPU, it has all the neccessary power to use this well. (Intel VT-d)
+
+Well, from OmniOS's prospective this hardware was to new to efficiently use these hw items. At least it can handle the GE interface. When I started to test OS's, even FreeBSD had its issues with the ixgbe drivers.
+
+So I had no other choice but using Xen as hypervisor. But I wanted something lightweight in the dom0. Well, that was when I found 'alpine linux'.
+
+It can be installed to a pendrive. But it uses the pendrive only at boot. It can load the whole system into memory. I can restrict how much memory should the dom0 see.
+
+A small pendrive with a vfat filesystem could do the job. The configurations are saved in a tarball, using the lbu commands. All the packages are cached onto the pendrive, and loaded and _installed_ on boot.
+
+The hostname became _nas_. I neither had a better idea this time.
+
+But, still the most important guest is an OmniOS domU, where I can share my files via NFS. Or when I need an iSCSI target, I can use that. Or can run ngz's. Whatever you can imagine.
+
+I tried to directly pass the ahci controller to omnios, but it couldn't be done in a simple way, since the hardcoded stuff in alpine linux always loads the ahci driver. I tried to blacklist them, etc. but the modprobe config files are loaded from the pendrive at a later phase. So, I gave up.
+
+Anyway: at the final stage, I plan to migrate the LSI controller to this box as well.
+
+=== nas-omni the most important domU
+
+Well, As I said, it had its problems. I spend a lot of time finding why the xnf driver crash the system on boot. Well, Alpine has a much faster release cycle than Debian. They already had Xen 3.7 when I started to experiment with that. I used several hours, just to pinpoint which alpine version was the one, where the guest omnios doesn't crash, and which one was where it starts to crash.
+
+Finally in 151026, they fixed the xnf driver. The root cause was, that they also changed the _API_ in the xen side, and that changed was not done on the guest's side.
+
+When it was done, I already started to experiment with this.
+
+The two nas was running in paralell for a long time.
+
+This was my PoC area for a long time. Now this is the _live_ system, and this migration series entries in my blog will tell the story, how I migrated everything from my old N54L to this new machine.
+
+A already had a couple of important ngz here, what I didn't want to loose:
+* rt: this would be the replacement of the old omni zone. At least, one important package from the niksula.hut.fi repo was installed here, and was left running in screen, just to compare the two.
+* omni-lx: A regular lx branded zone with ubuntu 16.04LTS for having a linux based playground.
+* omni-ubi: Another lx branded zone, with another ubuntu 16.04LTS. I mounted a couple of datasets via lofs here, and an extra repo was added. I used this to run Avidemux. The sound part is not interesting when I want to cut out uninteresting parts and append videos together. You can already found some of them on youtube. eg. link:https://youtu.be/HFkYeluTUG0[this one] It's very nice how fat it can process videos, even if that was on old less then 1T era Samsung disks. 
+
+== Epilog
+
+Well, this was the original status. The achieved goal:
+- Add in 5 new disks to the new nas
+- have all the data what the old n54l has
+- have all the services what the old n54l provided
+- don't lose services what was built here during the PoC era
+
+In the next couple of blog entries I'll write about the important and interesting parts of this migration.
