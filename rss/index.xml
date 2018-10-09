@@ -1,4 +1,278 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Sep 2018 23:13:02 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Themes]]></title><description><![CDATA[<div id="toc" class="toc">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 09 Oct 2018 00:34:44 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[History of a migration]]></title><description><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_foreword">Foreword</a></li>
+<li><a href="#_the_old_n54l">The old N54L</a>
+<ul class="sectlevel2">
+<li><a href="#_sb">sb</a></li>
+<li><a href="#_omni">omni</a></li>
+<li><a href="#_vbox">vbox</a></li>
+</ul>
+</li>
+<li><a href="#_the_new_box">The new box</a>
+<ul class="sectlevel2">
+<li><a href="#_the_dom0">The dom0</a></li>
+<li><a href="#_nas_omni_the_most_important_domu">nas-omni, the most important domU</a></li>
+</ul>
+</li>
+<li><a href="#_epilog">Epilog</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_foreword">Foreword</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ve recently migrated my home NAS from an old HP microserver N54L to a custom built machine. This article and the following couple of articles will tell the story of that.</p>
+</div>
+<div class="paragraph">
+<p>This will be a long story and practically I&#8217;m alerady done with the most of the tasks. So now I just try to remember what and how did I to manage this transition. I&#8217;m not a newbie, so notes were taken, where I can show what commands I&#8217;ve run, what result did them gave back, and hopefully I&#8217;ll remember why I&#8217;ve did the things the way I did, etc.</p>
+</div>
+<div class="paragraph">
+<p>In this first article I will explain only the from and to states. What was my original NAS&#8217;s architecture and what is the achieved goal on the new one.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_old_n54l">The old N54L</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The old NAS was a HP Microserver N54L. The host OS was OmniOS 151014. Yes, I know it&#8217;s quite old. But, I didn&#8217;t have a chance to upgrade that to the latest LTS. My plan was, that the migration will solve that problem. One of the bigest problems was, that I still had two VirtualBox VM&#8217;s, and I still need at least one of the two.
+On the gz I had three ngz:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sb,</p>
+</li>
+<li>
+<p>omni,</p>
+</li>
+<li>
+<p>vbox.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The gz was running on a pendrive. All the data and ngz&#8217;s were on the spinning disks. The pool name was just the textbook example: <em>tank</em>.</p>
+</div>
+<div class="paragraph">
+<p>The only extras compared to a basic N54L in the hw:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RAM upgraded to 16GB DDR3 ECC</p>
+</li>
+<li>
+<p>A PCI-E LSI hba was installed. Since the HP microserver uses the same SFF-8087 connector as the LSI, it was not a big deal to use that instead of the motherboard&#8217;s ports.</p>
+</li>
+<li>
+<p>Since the LSI card has 8 ports, I could have a 5 WD Red disk raidz, and a Samsung 850 EVO SSD as zil and l2arc.</p>
+</li>
+<li>
+<p>The 5th disk was placed into the ODD&#8217;s slot.</p>
+</li>
+<li>
+<p>The ssd was just lying there in the box. It doesn&#8217;t have moving parts, it&#8217;s not a problem, if it&#8217;s not fixed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When I had to give a name to the host, I didn&#8217;t have any good idea, so the hostname became: oi.</p>
+</div>
+<div class="paragraph">
+<p>During the migration I renamed this to n54l. Still not a testimony of a huge fantasy, but at least it doesn&#8217;t look like openindiana or OmnI.</p>
+</div>
+<div class="sect2">
+<h3 id="_sb">sb</h3>
+<div class="paragraph">
+<p>The sb was an old "SolarisBox"/"ShellBox". That was my "administration" interface. Threw rocks on me, but I also had <em>mc</em> installed here 😁</p>
+</div>
+<div class="paragraph">
+<p>I don&#8217;t like to have important stuff in the Global Zone itself. This ngz was where I managed my files locally with an mc, etc. Well, most of these functions could been abandoned by now, but some sentimental feelings hold me back to dispose of this ngz. Ah and the other thing: this was the master of my home.intra dns zone 😁</p>
+</div>
+<div class="paragraph">
+<p>Originally, in the previous life of this nas, it was an OpenIndiana 151a9. So the sb was salvaged from that version. The rpool was on a previous pendrive. Just after a couple of years that pendrive just died. Since illumos-based systems have a dump (similar to Linux&#8217;s swap) on the rpool, it was not unexpected. (Sorry for the double negative) But when that pendrive just died, I installed the 151014 OmniOS to the new pendrive. I saved what I could. The most important things were the zone configuration files.
+Thanks to this design, I just needed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to zpool import tank on the new OS</p>
+</li>
+<li>
+<p>re-create the zones based on the salveged config files</p>
+</li>
+<li>
+<p>install gz-parts of virtualbox into the GZ</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>So the downtime was only that long, while I bought a new pendrive.</p>
+</div>
+<div class="paragraph">
+<p>It was also a nice experience, that the 151014 could run the 151a9 without any change. It seems in those early times the abi didn&#8217;t diverged to much between this two Illumos-based os.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_omni">omni</h3>
+<div class="paragraph">
+<p>Since, the host OpenIndiana was replaced by OmniOS years ago, I installed another "ShellBox" to the system. Less packages, but more recent. And the important part was, that I could use some semi-offical package from the niksula.hut.fi repo. This was also a jumpbox, so I could logged in to my home network using mix of tunnels and TCP port forwards and ssh keys together.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vbox">vbox</h3>
+<div class="paragraph">
+<p>As I already told, I didn&#8217;t want to run any service on the GZ directly. That was the case with my VirtualBox VM&#8217;s as well.
+I had two VM&#8217;s in this zone:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>monitor: A linux vm running munin, and a migrated lxc (hostname: jango) which runs icinga. And previously I had a redmine here as well. And I&#8217;d like to forget this part (only the redmine, not the icinga) forever 😁</p>
+</li>
+<li>
+<p>fbsd: A freebsd VM. For my first babysteps with FreeBSD.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_new_box">The new box</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I started the project more than a year ago. After a year I still was in the PoC state, so 1 or 2 months ago, I&#8217;ve just decided that I&#8217;ll buy the new disks, and let&#8217;s do the migration. (Kinda' pre-christmas gift to myself.)</p>
+</div>
+<div class="paragraph">
+<p>The project started with finding the right hardware. Since this was planned as an upgrade, I thought every possible (and payable) part should be upgraded. Therefore I spent a lot of time with choosing the components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Silverstone SST-DS380B, I&#8217;ve read about it somewhere at <a href="https://hup.hu">hup</a></p>
+</li>
+<li>
+<p>SuperMicro X10SDV-6C+-TLN4F Motherboard</p>
+</li>
+<li>
+<p>Kingston KVR21R15D4K4/64 RAM 64 GB 2133 MHz DDR4 ECC Registered CL15 DIMM Kit (4 x 16 GB)</p>
+</li>
+<li>
+<p>Samsung MZ-V6P512BW 960 PRO M.2-2280 512GB PCI Express 3.0 x4 NVMe Solid State Drive</p>
+</li>
+<li>
+<p>Some salvaged pendrive for the Host OS 😁</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since this motherboard has NICs which was made in the PCI SR-IOV era, I planned to use this with a Type1 Hypervisor, which can effetively use these features.</p>
+</div>
+<div class="paragraph">
+<p>I also bought a switch, so I can connect all the ports together, I can run speed tests, implement PoC network configurations. At least, I can have several vlans. So I bought a <em>Cisco SG300-10P 8x10/100/1000 POE +2x UTP/SFP SRW2008P Gigabit Switch</em>.</p>
+</div>
+<div class="paragraph">
+<p>Well, I know that the motherboard has 10GE ports, but I check and haven&#8217;t found 10G managed switches for a reasonable price. For PoC purpose, this will be just enough.</p>
+</div>
+<div class="paragraph">
+<p>Most of the parts was given last year already. I used 3 old 750GB Samsung disks from my previous^n PC in the PoC phase, and started to implement the new system.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_dom0">The dom0</h3>
+<div class="paragraph">
+<p>As I said, I intended to use the benefits of the PCI SR-IOV interfaces. This way I can give a complete PCI virtual function to every VM on the host. Since the motherboard also has some kind of Xeon CPU, it has all the neccessary power to use this well. (Intel VT-d)</p>
+</div>
+<div class="paragraph">
+<p>Well, from OmniOS&#8217;s prospective this hardware was too new to efficiently use these hw items. Or to use them at all. At least it can handle the GE interface. When I started to test OS&#8217;s, even FreeBSD had its issues with the ixgbe drivers. It also came up, to use FreeBSD as the <em>nas</em> system. But then I abandoned this idea. I feels the OmniOS and the illumos-based systems more mature. At least for me, it seems they spend more time on design robust backgrounds then to implement drivers for recent hardwares.</p>
+</div>
+<div class="paragraph">
+<p>So I had no other choice but using Xen as hypervisor. But I wanted something lightweight in the dom0. Well, that was when I found <a href="https://alpinelinux.org"><em>alpine linux</em></a>.</p>
+</div>
+<div class="paragraph">
+<p>It can be installed to a pendrive. But it uses the pendrive only at boot. It can load the whole system into memory. I can restrict how much memory should the dom0 see.</p>
+</div>
+<div class="paragraph">
+<p>A small pendrive with a vfat filesystem could do the job. The configurations are saved in a tarball. Using the lbu commands it&#8217;s also not a big deal to manage the contents. All the packages are cached onto the pendrive, and loaded and <em>installed</em> on boot.</p>
+</div>
+<div class="paragraph">
+<p>The hostname became <em>nas</em>. I neither had a better idea this time.</p>
+</div>
+<div class="paragraph">
+<p>But, still the most important guest is an OmniOS domU, where I can share my files via NFS. Or when I need an iSCSI target, I can use that. Or can run ngz&#8217;s. Whatever you can imagine.</p>
+</div>
+<div class="paragraph">
+<p>I tried to directly pass the ahci controller to omnios, but it couldn&#8217;t be done in a simple way, since the hardcoded stuff in alpine linux always loads the ahci driver. I tried to blacklist them, etc. but the modprobe config files are loaded from the pendrive at a later phase. So, I gave up.</p>
+</div>
+<div class="paragraph">
+<p>Anyway: at the final stage, I plan to migrate the LSI controller to this box as well.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nas_omni_the_most_important_domu">nas-omni, the most important domU</h3>
+<div class="paragraph">
+<p>Well, As I said, it had its problems. I spend a lot of time finding why the xnf driver crash the system on boot. Well, Alpine has a much faster release cycle than Debian. They already had Xen 4.7 or something late when I started to experiment with that. I used several hours, just to pinpoint which alpine version was the one, where the guest omnios doesn&#8217;t crash, and which one was where it starts to crash.</p>
+</div>
+<div class="paragraph">
+<p>Finally in 151026, they fixed the xnf driver. So it&#8217;s not interesting anymore. The root cause was that on xen&#8217;s side the <em>API</em> was changed and that changed was not followed on the guest&#8217;s side.</p>
+</div>
+<div class="paragraph">
+<p>When it was done, I already started to experiment with this.</p>
+</div>
+<div class="paragraph">
+<p>The two nas was running in paralell for a long time.</p>
+</div>
+<div class="paragraph">
+<p>This was my PoC area for a long time. Now this is the <em>live</em> system, and this migration series entries in my blog will tell the story, how I migrated everything from my old N54L to this new machine.</p>
+</div>
+<div class="paragraph">
+<p>A already had a couple of important ngz here, what I didn&#8217;t want to loose:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>rt: this would be kind of a replacement of the old omni zone. At least, one important package from the niksula.hut.fi repo was installed here, and was left running in screen, just to compare the two.</p>
+</li>
+<li>
+<p>omni-lx: A regular lx branded zone with ubuntu 16.04LTS for having a linux based playground.</p>
+</li>
+<li>
+<p>omni-ubi: Another lx branded zone, with another ubuntu 16.04LTS. I mounted a couple of datasets via lofs here, and an extra repo was added. I used this to run Avidemux. The sound part is not interesting when I want to cut out uninteresting parts and append videos together. You can already found some of them on youtube. eg. <a href="https://youtu.be/HFkYeluTUG0">this one</a>. It&#8217;s very nice how fast it can process videos, even if that was on old <em>less then 1T</em> era Samsung disks.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_epilog">Epilog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Well, this was the original status. The achieved goal:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add in 5 new disks to the new nas</p>
+</li>
+<li>
+<p>have all the data what the old n54l has</p>
+</li>
+<li>
+<p>have all the services what the old n54l provided</p>
+</li>
+<li>
+<p>don&#8217;t lose services what was built here during the PoC era</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the next couple of blog entries I&#8217;ll write about the important and interesting parts of this migration.</p>
+</div>
+</div>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/10/08/History-of-a-migration.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/10/08/History-of-a-migration.html</guid><category><![CDATA[Blog]]></category><category><![CDATA[OmniOS]]></category><category><![CDATA[NAS]]></category><category><![CDATA[n54l]]></category><category><![CDATA[supermicro]]></category><category><![CDATA[sr-iov]]></category><category><![CDATA[xen]]></category><category><![CDATA[alpine]]></category><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Mon, 08 Oct 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Themes]]></title><description><![CDATA[<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_foreword">Foreword</a></li>
