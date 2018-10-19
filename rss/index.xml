@@ -1,4 +1,208 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 19 Oct 2018 22:31:45 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[History of a migration]]></title><description><![CDATA[<div id="toc" class="toc">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gyu's personal blog]]></title><description><![CDATA[life, the universe and everything]]></description><link>https://pasztor.github.io/blog</link><image><url>/blog/images/firstentrybg.jpg</url><title>Gyu&apos;s personal blog</title><link>https://pasztor.github.io/blog</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 19 Oct 2018 22:32:41 GMT</lastBuildDate><atom:link href="https://pasztor.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Bridge mode]]></title><description><![CDATA[<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_why_did_i_choose_upc">Why did I choose UPC</a></li>
+<li><a href="#_the_kinda_good_era">The kinda' good era</a></li>
+<li><a href="#_the_last_couple_of_months">The last couple of months</a></li>
+<li><a href="#_bridge_mode">Bridge mode</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_why_did_i_choose_upc">Why did I choose UPC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Well, why I lived in Dublin UPC provided a very reliable service. I had no reason to complain. Sorry, I meant Virgin Media.</p>
+</div>
+<div class="paragraph">
+<p>Before I moved to Dublin I lived in the same district in Budapest as I live now. Even the closest bus stop is tha same. There is kinda 40 meters between my old flat and my current one :) I don&#8217;t like changes if they don&#8217;t mean also an improvement at the same time.</p>
+</div>
+<div class="paragraph">
+<p>In those days, I was an UPC user. Mostly satisfied. (Mostly harmless) However, one little secret: I had a TC modem then, and I used that modem in bridge mode. The cable guy told me a secret: If I put that to modem mode, but define a 192.168.0.x/24 address as a secondary on my own router I can still access the admin interface via 192.168.0.1. Cool! These are the small secrets, why I happily pay that small amount for installing the modem. And in these old flats the cables could be problematic as well. At least I instantly hava a professionel, who has tools to fix that. I already have a tons of tools myself. And I not mean just the screwdriver, but I believe in wired network for devices which have a fixed position. That includes the cable modem, my own router, nas, switch, desktop computer, laptop docking station, media player and amplifier.</p>
+</div>
+<div class="paragraph">
+<p>So, I have tons of tools at home. I don&#8217;t want to make my situation even worse to have tools for RF cables. In the '90s a pocket knife was enough to prepare the cables. However it was also easy to cut yourself at the same time. But in those days, only some analogue tv broadcast travelled through that wire. There were no Docsis 3.0 at all. The first time I met with an F connector was when we bought a satellite reveiver. (Still the '90s) To rig the coax cables in a proper way, it also needs a different toolset. I rather don&#8217;t waste my time with that. It&#8217;s a one time job per move between cities. Or sometimes between countries in my case :)</p>
+</div>
+<div class="paragraph">
+<p>Btw.: My amplifier&#8217;s remote controller is so poor in quality, that a couple of the buttons don&#8217;t even work after a couple of years. The power button is one of them. So If I don&#8217;t want to get up from my beansack chair, I just use a shell script to turn it on/of, change between media player and cd-line in inputs, or set volume. And I wouldn&#8217;t call a Marantz SR-6007 a low-end device. But certainly, who designed it&#8217;s remote controller weren&#8217;t the sharpest knife in the drawer. That also stands for those who designed its display.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/blog/images/marantz_display.jpg" alt="Display of my Marantz amp">
+</div>
+</div>
+<div class="paragraph">
+<p>That scripts is not a biggie:</p>
+</div>
+<div class="listingblock">
+<div class="title">bin/maris</div>
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">#!/bin/sh
+
+case "$1" in
+  on)
+    curl -X POST --data-urlencode 'cmd0=PutZone_OnOff/ON' http://maris.home.intra/MainZone/index.put.asp
+    ;;
+  off)
+    curl -X POST --data-urlencode 'cmd0=PutZone_OnOff/OFF' http://maris.home.intra/MainZone/index.put.asp
+    ;;
+  cd)
+    curl -X POST --data-urlencode 'cmd0=PutZone_InputFunction/CD' http://maris.home.intra/MainZone/index.put.asp
+    ;;
+  mplay)
+    curl -X POST --data-urlencode 'cmd0=PutZone_InputFunction/MPLAY' http://maris.home.intra/MainZone/index.put.asp
+    ;;
+  vol)
+    curl -X POST --data-urlencode "cmd0=PutMasterVolumeSet/$2" http://maris.home.intra/MainZone/index.put.asp
+    ;;
+esac</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_kinda_good_era">The kinda' good era</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the begginning I really liked what I got from UPC. The same native IPv6 connection what I&#8217;ve got in Dublin. Combined in dual stack with a cgnat IPv4 access. I didn&#8217;t mind the problem, that I didn&#8217;t have a public IPv4 address. What I wanted to access remotely, I could do via tunnels. Or I could access other stuff directly via IPv6, just I had a feeling that only a couple of UPC users and AWS EC2 instances has proper IPv6 access. The rest of the world still uses IPv4.</p>
+</div>
+<div class="paragraph">
+<p>But at least I could experiment with pfSense&#8217;s IPv6 settings and playing around with IPv6 in EC2.</p>
+</div>
+<div class="paragraph">
+<p>It was also a difference compared to Dublin, that the connection went down in my favourite time frame, which means the weekends. I usually binge watch series or do various research work on Friday and Saturday evenings. Many times I hit the sack on the next morning around 6-7 am.</p>
+</div>
+<div class="paragraph">
+<p>Most of the times when I identified myself in their IVR with my client id the machine voice already anounced that there are maintenance in my area. It felt like they do a lot of firefights, instead of just maintaining a working service. But you could "subscribe" to a notification and they sent an SMS when the maintenance finished.</p>
+</div>
+<div class="paragraph">
+<p>Usually a couple of days later, I got an e-mail from them asking feedback, they were curious about the level of my satisfaction. Well, at least I felt satisfied, because I had a feeling that they work and they care with their customers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_last_couple_of_months">The last couple of months</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>My friend Feri already tried to protect me from UPC and their Connectbox solution. But I was sceptic, because in Dublin I&#8217;ve got a very reliable service with the connectboxes. Without the smallest problem in one and a half year!</p>
+</div>
+<div class="paragraph">
+<p>To summarize the next couple of paragraph: I don&#8217;t know what went wrong on their side, but now I have a feeling that most of their workers and even their managers are just imbecile spineless morons and they think that their customers are just labrats to experiment with.
+Now let me tell the story why did I get to this conclusion.</p>
+</div>
+<div class="paragraph">
+<p>In a nice sunday dawn around 2AM their service went down again. I decided to sit out Vivaldi and ask what to expect, when it will come back.</p>
+</div>
+<div class="paragraph">
+<p><em>Btw.: they publish their <strong>planned</strong> maintenance windows. I checked. It&#8217;s true, just in an insane format. They dump a shitty excel-ish data into a pdf, paginated to tens of pages, without any sane order. Ok it&#8217;s ordered based on maintenance times. And in the area column they merge regions. But just specific regions, and not even in a consequent way. So sometimes your district appears together with some other. Sometimes not. So if you are curious about your own area, you have to read and process kinda every single entry in that spreadsheet, to find if your area is there. Since I live in Nagytétény, which is part of Budapest&#8217;s XXII. district, it&#8217;s better if I check the neighbor as well. At least Halásztelek, which is on the other side of the Danube, but close to us. Érd doesn&#8217;t matter from this prospective. Don&#8217;t ask why! It&#8217;s UPC. I already gave up, to understand their logic. C&#8217;mon is that that hard, to provide a service to send e-mails <strong>before</strong> maintenance to the custumers, and just select it from the database if that customer is affected or not? Is it still hard in 20-fucking-18?</em></p>
+</div>
+<div class="paragraph">
+<p>Well, I wasn&#8217;t upset yet: They told me, that there is an unexpected issue affecting a larger area, and they are working on it. It could take days.</p>
+</div>
+<div class="paragraph">
+<p>On the next Tueasday afternoon or better said evening I sat out Vivaldi again. They&#8217;re still working. No promises. Except that they told me, I will be compensated on the next month&#8217;s bill.</p>
+</div>
+<div class="paragraph">
+<p>Then two weeks passed. I called them again. Well. I wasn&#8217;t as calm as I usually am when I speak with a support line. In the begginning I asked them nicely, what to expect. Then the lady lied into my face, that they fixed the problem <em>wait for it</em> <strong>twelve days ago</strong>!</p>
+</div>
+<div class="paragraph">
+<p>My next two question was:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Why didn&#8217;t I get the usual notification via sms, when the maintenance was finished and the service should work as expected again?</p>
+</li>
+<li>
+<p>If it&#8217;s fixed, why isn&#8217;t it work yet for me?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>She insisted to her story that it&#8217;s fixed, she don&#8217;t see any problem and it should work and started to speek with me in a tone what I can&#8217;t tolerate from a service provider. It&#8217;s like the old communist era when they thought they farts the passat wind, and the customers are to feed them, we are just neccesary bad to them. UPC, Hungary, 2018. Thank you Liberty Media for these commies!</p>
+</div>
+<div class="paragraph">
+<p>Then she kinda threatend me, that if she send a cable guy and the problem is on my side I have to pay for the repair service, etc. I told her that I&#8217;m pretty confident that to problem is not on my side, and <strong>please</strong> send the guy, I take the risk. Ok, I was upset, but I still remembered to use magic fuckin' words like <strong>please</strong>!</p>
+</div>
+<div class="paragraph">
+<p>At this point, I think it&#8217;s a good idea to clarify what was exactly the problem: Many times the modem sent a reset when you tried to establish a tcp connection. (eg. if you open Facebook in your browser, it opens a lot!) I&#8217;ve got back an icmp address unreachable. Doesn&#8217;t matter what, but saying an average one connection in every three got this back. And the source IP of the icmp was the modem&#8217;s 192.168.0.1. As I mentioned above: the modem was in router mode, the usual default setup, nothing changed. Except the wireless SSID name and password was altered since the default settings + I allowed in its firewall that my EC2 instance can connect to one of my local VM via IPv6.</p>
+</div>
+<div class="paragraph">
+<p>Next day, the cable guy arrives. Replace a modem with a new one. He says it works for him. Then I said, pleaase wait a little, I start up my machine. Ok, I don&#8217;t like to close tabs. I leave them open, and just suspend my machine. So, when it came up, and a couple of tcp connection was established (eg facebook chat likes to leave open tcp connections to receive push messages, google hangouts too, etc. And I don&#8217;t want to write here the obvious thing which uses tens of connections ;) Hope you understand ;) ) So, after tens of tcp connections were open, the modem started to do it&#8217;s crazy thing again.
+At least the cable guy was sane and had spine / moral integrity and admitted that this is a problem and it&#8217;s technical level is above his knowledge, but he was also sure that it shouldn&#8217;t work like this.</p>
+</div>
+<div class="paragraph">
+<p><em>That&#8217;s why I like, when someone is there personally! They have to admit the problem when they face it, and won&#8217;t lie into your face, like the lady did via phone.</em></p>
+</div>
+<div class="paragraph">
+<p>He immediately started to discuss the problem with their center. They suggested to let&#8217;s try to change the modem to an IPv4 image. Well, I didn&#8217;t like the idea, since I was happy with cgnat+<strong>IPv6</strong>, but if that&#8217;s the price of a working internet connection, I can gave up native IPv6 access. So we tried that image.</p>
+</div>
+<div class="paragraph">
+<p>Still the same happened. Then their coordinator in the center mentioned, that yay, they have a newer firmware version for this connectbox modem for IPv4. Let&#8217;s try that. We sat out the next reboot, and <strong>behold</strong>! Magic! It started to work. Yay!</p>
+</div>
+<div class="paragraph">
+<p>My hypothesis is that on that crazy sunday night they started to spread a buggy firmware version. Just they have no inventory or tracking of used image versions and customers. It&#8217;s 2018. We don&#8217;t need AI to correlate problem reports and used image versions! It&#8217;s not even the rocket science level of data mining! I think a mediocre high school student with some python knowledge could do the job.</p>
+</div>
+<div class="paragraph">
+<p>Lying into a customer&#8217;s face is also not a solid block of building customer trust. Please Sasha, forget the old commie attitude and treat customers as they are: <strong>customers</strong>!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bridge_mode">Bridge mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By this time, dear readers you might guessed that my way of the cross was not over with this yet since the title of this blog entry is 'Bridge mode'.
+One or two weeks ago, this shiny new firmware started to behave badly again. Or I rather bet on that that they replaced that again with an even newer, but broken-again version.</p>
+</div>
+<div class="paragraph">
+<p>At this point you might understand, why I feel myself as a labrat as a UPC customer.</p>
+</div>
+<div class="paragraph">
+<p>At random times I felt that the cable modem just reboots. My OpenWRT firewall was not able to renew it&#8217;s dhcp lease. Then you waited a couple of minutes. It returned to operational again. Then for a few seconds 8.8.8.8&#8217;s ping time was over a whole second. Then after ~30-90 seconds ping times returned to normal again.</p>
+</div>
+<div class="paragraph">
+<p>But it&#8217;s not a reliable connection. Not if you work from home a lot.</p>
+</div>
+<div class="paragraph">
+<p>And I could barely stay calm when the modem did it&#8217;s reboot game during my morning standups between 10am and 11am. And it happened every day since this new problem appeared.</p>
+</div>
+<div class="paragraph">
+<p>Then I said myself, enough of this shit, let&#8217;s change to bridge mode. I remember that while I used my TC modem in bridge mode, it gave a public IP to every client attached to it. I had the same Ubiquity RS-Pro box with OpenWRT. But now, another port from the cable modem was connected with my switch. And sometime when a guest was there, when their phone connected to the modem&#8217;s wifi, it got another public ip, just as my OpenWRT got.</p>
+</div>
+<div class="paragraph">
+<p>In the meantime I started to play around with pfsense and with FreeBSD as a router/firewall. So that access port was connected with two wirtual machines. In one I had a pfsense and in the other I had a native FreeBSD, with a couple of <em>pf</em> rules.</p>
+</div>
+<div class="paragraph">
+<p>I wanted to play nicely so I wanted to reshape my network before change to bridge mode, that way only one device needs a public IPv4 address. This job needed some restructure work in my network connections.
+I reconfigured my nas, that the vf which provides the uplink connection of the FreeBSD box should now bound the the lan network of the pfsense.</p>
+</div>
+<div class="paragraph">
+<p>I also configured my switch to provide an access port in the pfsense&#8217;s lan network. I thought it&#8217;s the time, that my internet-facing device should be the pfsense.</p>
+</div>
+<div class="paragraph">
+<p>It was not the time yet for pfsense being my lan facing device. I stall this step since a long time. I want to learn how the dns settings exactly works in pfsense before I replace my old ubiquity with a pfsense vm. (Just I had other things to do with much higher prio.) In my OpenWRT, I changed dnsmasq settings to not use 53 ports and I configred a bind to the freed up 53 ports. It does the recursion on its own starting from the root servers. Doesn&#8217;t forwarded queries to any provider. Keep the resolution between me and the authoritative servers, don&#8217;t trust any other provider. Until I can&#8217;t do this configuration on pfsense, my lan-facing device remains the Ubiquity with the OpenWRT.
+So I pulled the plug from the cable modem and connected to my switch. This way the OpenWRT&#8217;s uplink was provided by the pfsense vm.</p>
+</div>
+<div class="paragraph">
+<p>I could do the same port forward on the pfsense what I had on my connectbox&#8217;s setup. It&#8217;s not a bid deal. Yeah, I feel the pain, that it has gui instead of a nice pf.conf file. But at least this part is not worse than OpenWRT&#8217;s.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also a decision what I&#8217;m stalling since a long time, to find out what solution I want to use on my home Firewall: pfsense, with nice gui, and it has some really nice features. Like filtering ads, deeper https inspection, etc. Or implement the same from ground up in a native freebsd, and manage the configuration via ansible, so I could reproduce the whole setup in minutes. If you have any suggestions, or extra thought on this topice, please write to the comment section! Every comment is welcome!</p>
+</div>
+<div class="paragraph">
+<p>Then I logged in to the modem&#8217;s setup. Changed it to bridge mode and voilá: after a couple of minutes it was in bridge mode. Don&#8217;t trust a provider&#8217;s device where imbecils maintain the software and they care more with the shiny UI effects than with a stable working <em>business logic</em> underneath.</p>
+</div>
+<div class="paragraph">
+<p>Yepp, I know that this is not a general recipe for an average household  where a networking professional is not just available. But for every other case I suggest to take control at least on this level. From that very point when you gave up trust in UPC and don&#8217;t use their modem as a router your wrinkles just goes away and turn to smiles! Let&#8217;s just knock it on wood: I did this change on tuesday. Since that everything works, no interruptions. I have a strong and stable wired connection what I never had before.</p>
+</div>
+<div class="paragraph">
+<p>Oh yeah. I said wired. From that point you switch of your cable modem as a router you can say bye bye to it&#8217;s wifi. Although I had to be honest it&#8217;s AC wifi was really a cool stuff. But at least my current employer don&#8217;t give us macbook pros, so I couldn&#8217;t even enjoy it&#8217;s advantages therefore I didn&#8217;t lost a thing here.</p>
+</div>
+<div class="paragraph">
+<p>Now I&#8217;ll just go to read fisher99&#8217;s <a href="http://f99.hu/blog/">blog</a>. Maybe there are bigger idiots out in the world and I can calm down knowing that UPC&#8217;s idiots are just the tip of the iceberg.</p>
+</div>
+</div>
+</div>]]></description><link>https://pasztor.github.io/blog/2018/10/19/Bridge-mode.html</link><guid isPermaLink="true">https://pasztor.github.io/blog/2018/10/19/Bridge-mode.html</guid><category><![CDATA[Blog]]></category><category><![CDATA[upc]]></category><category><![CDATA[connectbox]]></category><category><![CDATA[bridge_mode]]></category><category><![CDATA[marantz]]></category><dc:creator><![CDATA[PÁSZTOR György]]></dc:creator><pubDate>Fri, 19 Oct 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[History of a migration]]></title><description><![CDATA[<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_foreword">Foreword</a></li>
